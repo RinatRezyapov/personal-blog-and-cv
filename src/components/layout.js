@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 
 const Layout = ({ location, title, children }) => {
+
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 
@@ -14,6 +15,7 @@ const Layout = ({ location, title, children }) => {
           ...scale(1.5),
           marginBottom: rhythm(1.5),
           marginTop: 0,
+          fontSize: '2rem'
         }}
       >
         <Link
@@ -31,7 +33,6 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h3
         style={{
-          fontFamily: `Montserrat, sans-serif`,
           marginTop: 0,
         }}
       >
@@ -59,7 +60,7 @@ const Layout = ({ location, title, children }) => {
       <header>{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>

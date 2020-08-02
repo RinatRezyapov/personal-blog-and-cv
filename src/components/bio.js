@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
@@ -14,9 +14,9 @@ import { rhythm } from "../utils/typography"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
+          fixed(width: 90, height: 90) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -29,6 +29,8 @@ const Bio = () => {
           }
           social {
             twitter
+            github
+            linkedin
           }
         }
       }
@@ -57,11 +59,26 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author.name}</strong> {author.summary}
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
+        Personal blog by
+        {' '}
+        <a href={`https://twitter.com/${social.twitter}`} target='_blank'>
+          <strong>
+            {author.name}
+          </strong>
         </a>
+        <div>
+          {author.summary}
+          <div>
+            <Link to={`/cv`}>CV</Link>
+            {' | '}
+            <a href={`https://twitter.com/${social.twitter}`} target='_blank'>twitter</a>
+            {' | '}
+            <a href={`https://github.com/${social.github}`} target='_blank'>github</a>
+            {' | '}
+            <a href={`https://linkedin.com/in/${social.linkedin}`} target='_blank'>linkedin</a>
+          </div>
+        </div>
+
       </p>
     </div>
   )

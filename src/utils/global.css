@@ -1,0 +1,10 @@
+body {
+  font-family: 'Montserrat, sans-serif';
+  background: #282c35;
+  color: white;
+}
+
+blockquote {
+  color: white;
+  border-left-color: white;
+}
