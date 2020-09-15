@@ -239,7 +239,7 @@ export const Spacer = styled.div<ISpacerProps>`
 const Paper = styled.div`
   font-family: Montserrat, sans-serif;
   width: 960px;
-  margin: 8rem auto;
+  margin: 0 auto;
   display: flex;
   box-shadow: 0px 3px 15px -2px hsla(0,0%,0%,0.5), 0px 3px 20px 0px hsla(0,0%,0%,0.5), 0px 1px 40px 0px hsla(0,0%,0%,0.5);
 `;
