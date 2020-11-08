@@ -31,7 +31,7 @@ import enzymeIcon from '../../content/assets/enzyme-icon.png'
 import amchartsIcon from '../../content/assets/amcharts-icon.svg'
 import nextjsIcon from '../../content/assets/nextjs-icon.svg'
 import styledComponentsIcon from '../../content/assets/styled-components.png'
-import { Subtitle2, H2 } from "../styles/Typography";
+import { Subtitle2, H2, gradientMixin } from "../styles/Typography";
 import CvExperience from "../components/CvExperience";
 import CvEducation from "../components/CvEducation";
 import CvLanguages from "../components/CvLanguages";

@@ -69,10 +69,6 @@ const SEO = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
-        {
-          name: `theme-color`,
-          content: 'black',
-        },
       ].concat(meta)}
     />
   )

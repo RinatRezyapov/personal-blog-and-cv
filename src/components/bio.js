@@ -76,13 +76,13 @@ const Bio = () => {
         <div>
           {author.summary}
           <div>
-            <Link to={`/cv`}>CV</Link>
+            <Link to={`/cv`}>Curriculum Vitae</Link>
             {' | '}
-            <a href={`https://twitter.com/${social.twitter}`} target='_blank'>twitter</a>
+            <a href={`https://twitter.com/${social.twitter}`} target='_blank'>Twitter</a>
             {' | '}
-            <a href={`https://github.com/${social.github}`} target='_blank'>github</a>
+            <a href={`https://github.com/${social.github}`} target='_blank'>Github</a>
             {' | '}
-            <a href={`https://linkedin.com/in/${social.linkedin}`} target='_blank'>linkedin</a>
+            <a href={`https://linkedin.com/in/${social.linkedin}`} target='_blank'>Linkedin</a>
           </div>
         </div>
 
