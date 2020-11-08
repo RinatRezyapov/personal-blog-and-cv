@@ -22,7 +22,6 @@ interface IProps {
 const CvSkills: React.FunctionComponent<IProps> = ({ skills }) => (
   <>
     <OverlineText>Skills</OverlineText>
-    <Spacer mb={1} />
     {skills.map((skill, idx) => (
       <div key={idx}>
         <CaptionText>{skill.title}</CaptionText>

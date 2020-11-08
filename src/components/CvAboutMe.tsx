@@ -13,11 +13,9 @@ interface IProps {
 const CvAboutMe: React.FunctionComponent<IProps> = ({ data }) => (
   <>
     <OverlineText>ABOUT ME</OverlineText>
-    <Spacer mb={1} />
-    <Body1><i>{data}</i></Body1>
+    <AboutMeText><i>{data}</i></AboutMeText>
     <Spacer mb={2} />
     <OverlineText>Location</OverlineText>
-    <Spacer mb={1} />
     <Body1><i>I live in Ufa, Russian Federation</i></Body1>
     <Spacer mb={1} />
     <LocationMap src={mapIcon} />
@@ -28,4 +26,8 @@ export default CvAboutMe;
 
 const LocationMap = styled.img`
   width: 200px;
+`;
+
+const AboutMeText = styled(Body1)`
+  text-align: center;
 `;

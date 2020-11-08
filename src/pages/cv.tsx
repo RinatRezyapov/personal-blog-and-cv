@@ -235,6 +235,7 @@ const Wrapper = styled.div`
   width: 960px;
   margin: 0 auto;
   display: flex;
+  padding: 1rem 0;
   @media (max-width: 1024px) {
     width: auto;
     flex-direction: column;
@@ -248,10 +249,10 @@ const C1 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 1rem;
+  padding: 1rem;
 `;
 
 const C2 = styled.div`
   flex: 1;
-  padding: 3rem 1rem;
+  padding: 1rem;
 `;

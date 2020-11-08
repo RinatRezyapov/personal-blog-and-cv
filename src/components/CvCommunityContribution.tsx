@@ -18,7 +18,6 @@ interface IProps {
 const CvCommunityContribution: React.FunctionComponent<IProps> = ({ contributions }) => (
   <>
     <OverlineText>Community contribution</OverlineText>
-    <Spacer mb={1} />
     {contributions.map((v, idx) => (
       <div key={idx}>
         <CaptionText>{v.date}</CaptionText>

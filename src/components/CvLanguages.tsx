@@ -16,7 +16,6 @@ interface IProps {
 const CvLanguages: React.FunctionComponent<IProps> = ({ languages }) => (
   <>
     <OverlineText>Languages</OverlineText>
-    <Spacer mb={1} />
     {languages.map((v, idx) => (
       <Container key={idx}>
         <Subtitle3><b>{v.language}</b></Subtitle3>&nbsp;<CaptionText inline> {v.proficiency}</CaptionText>

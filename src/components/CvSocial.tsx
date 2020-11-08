@@ -17,7 +17,6 @@ interface IProps {
 const CvSocial: React.FunctionComponent<IProps> = ({ data }) => (
   <>
     <OverlineText>Social</OverlineText>
-    <Spacer mb={1} />
     <Container>
       {data.map(v => <Badge src={v.src} iconHeight={v.iconHeight} href={v.href} />)}
     </Container>

@@ -13,7 +13,6 @@ interface IProps { }
 const CvPersonal: React.FunctionComponent<IProps> = () => (
   <>
     <OverlineText>PERSONAL</OverlineText>
-    <Spacer mb={1} />
     <Container>
       <PersonalBadge src={burtonIcon} title='Snowboarding' iconHeight={25} />
       <PersonalBadge src={theKillersIcon} title='Music' iconHeight={25} />
