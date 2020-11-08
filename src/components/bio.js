@@ -11,6 +11,15 @@ import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
 
+const IMAGE_STYLE = {
+  fontFamily: "Montserrat, sans-serif",
+  marginBottom: 0,
+  borderRadius: `50%`,
+  backgroundClip: "content-box,border-box",
+  backgroundImage: "linear-gradient(#111,#111),linear-gradient(90deg,#ec6192,#ec4c34,#ffbd2b,#ebde56,#57c754,#53a1eb)",
+  padding: "4px",
+};
+
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -54,9 +63,7 @@ const Bio = () => {
           minWidth: 50,
           borderRadius: `100%`,
         }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
+        imgStyle={IMAGE_STYLE}
       />
       <p>
         Personal blog by

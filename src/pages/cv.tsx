@@ -13,28 +13,24 @@ import gitIcon from '../../content/assets/git-icon.svg'
 import sentryIcon from '../../content/assets/sentry-icon.svg'
 import stripeIcon from '../../content/assets/stripe-icon.svg'
 import googleFirebaseIcon from '../../content/assets/google-firebase-icon.svg'
-import vueIcon from '../../content/assets/vue-icon.svg'
-import angularIcon from '../../content/assets/angular-icon.svg'
 import gatsbyIcon from '../../content/assets/gatsby-icon.svg'
 import jestIcon from '../../content/assets/jest-icon.svg'
 import dateFnsIcon from '../../content/assets/date-fns-icon.svg'
 import lodashIcon from '../../content/assets/lodash-icon.svg'
-import codemirrorIcon from '../../content/assets/codemirror-icon.svg'
 import draftjsIcon from '../../content/assets/draftjs-icon.svg'
-import styledComponentsIcon from '../../content/assets/styled-components-icon.png'
-import materialUiIcon from '../../content/assets/material-ui.png'
-import reduxIcon from '../../content/assets/redux-icon.png'
+import materialUiIcon from '../../content/assets/material-ui.svg'
+import reduxIcon from '../../content/assets/redux-icon.svg'
 import tailwindcssIcon from '../../content/assets/tailwindcss-icon.png'
-import reactIcon from '../../content/assets/react-icon.png'
+import reactIcon from '../../content/assets/react-icon.svg'
 import cssIcon from '../../content/assets/css-icon.png'
 import javascriptIcon from '../../content/assets/javascript-icon.png'
 import typescriptIcon from '../../content/assets/typescript-icon.png'
 import htmlIcon from '../../content/assets/html-icon.png'
 import fptsIcon from '../../content/assets/fp-ts-icon.png'
 import enzymeIcon from '../../content/assets/enzyme-icon.png'
-import amchartsIcon from '../../content/assets/amcharts-icon.png'
-import d3Icon from '../../content/assets/d3-icon.png'
-import nextjsIcon from '../../content/assets/nextjs-icon.png'
+import amchartsIcon from '../../content/assets/amcharts-icon.svg'
+import nextjsIcon from '../../content/assets/nextjs-icon.svg'
+import styledComponentsIcon from '../../content/assets/styled-components.png'
 import { Subtitle2, H2 } from "../styles/Typography";
 import CvExperience from "../components/CvExperience";
 import CvEducation from "../components/CvEducation";
@@ -55,7 +51,9 @@ const IMAGE_COMPONENT_STYLE = {
 const IMAGE_STYLE = {
   marginBottom: 0,
   borderRadius: `50%`,
-  border: '4px solid white',
+  backgroundClip: "content-box,border-box",
+  backgroundImage: "linear-gradient(#111,#111),linear-gradient(90deg,#ec6192,#ec4c34,#ffbd2b,#ebde56,#57c754,#53a1eb)",
+  padding: "4px",
 };
 
 const CurriculumVitae = () => {
@@ -77,27 +75,27 @@ const CurriculumVitae = () => {
     name: 'Rinat',
     lastName: 'Rezyapov',
     title: 'Front-end Developer',
-    aboutMe: `I'm a front-end developer, and I love working with cutting-edge technologies to create great products that make impact on people's lives`,
+    aboutMe: `I enjoy working with the latest technologies in web development and helping businesses to create scalable and performant web applications`,
     experience: [
       {
         date: 'May 2019 - Present',
         company: { link: '', title: 'InCountry' },
         position: 'Senior Front-end Developer',
-        description: ['Working as an independent contractor for San Francisco based startup - InCountry (data residency-as-a-service)'],
+        description: ['Working on the main Portal product and other internal web applications at San Francisco based startup - InCountry', 'In my role as a senior front-end developer I introduced React Hooks API, TypeScript and Next.js to the existing Portal application', `In addition to web development I'm acting as front-end team lead for small team of front-end developers and designers`, `The duties  of this role includes requirements gathering, interaction with product  owner, short and mid-range project planning and estimation, daily  prioritization of work tasks for team members, reviewing and approving designs and preparing releases for deployment`],
         location: 'San Francisco, California (Remote)'
       },
       {
         date: 'Aug 2017 - May 2019',
         company: { link: '', title: 'OBVIDA' },
         position: 'Middle Front-end Developer',
-        description: ['Participated in development of an all-in-one CRM system functionality which includes form builder, marketing and business automation tools'],
+        description: ['Worked remotely as a middle front-end developer in a distributed team (Russia, Australia)', 'Participated in development of an all-in-one CRM system functionality which includes form builder, marketing and business automation tools', 'Designed and implemented kanban and calendar for task management module utilizing such tools as react-beautiful-dnd and WebSocket push notifications', 'Improved web application (1000+ React components) performance and scalability by increasing number of reusable React components and introducing react-window in tables with a high volume of entries'],
         location: 'Pyrmont, Australia (Remote)'
       },
       {
         date: 'Jan 2016 - Aug 2017',
         company: { link: '', title: 'Bashneft-Inform' },
-        position: 'Junior Front-end Developer',
-        description: ['Worked on development of an internal Service Desk web application for incident management and automation support'],
+        position: 'Chief IT department specialist',
+        description: ['Participated in the development of a Service Desk web application for incident management and automation support', 'Implemented ticket history module that enabled IT specialist to track the history of all the activities that have occurred to a ticket during its lifespan', 'Improved viewing experience of a web application by introducing responsive web design for mobile devices'],
         location: 'Ufa, Bashkortostan'
       }
     ],
@@ -120,14 +118,12 @@ const CurriculumVitae = () => {
           { iconSrc: styledComponentsIcon, title: 'styled-components' },
           { iconSrc: tailwindcssIcon, title: 'tailwindcss' },
           { iconSrc: draftjsIcon, title: 'draftjs' },
-          { iconSrc: codemirrorIcon, title: 'codemirror' },
           { iconSrc: lodashIcon, title: 'lodash' },
           { iconSrc: dateFnsIcon, title: 'date-fns' },
           { iconSrc: fptsIcon, title: 'fp-ts', round: true },
           { iconSrc: jestIcon, title: 'jest' },
           { iconSrc: enzymeIcon, title: 'enzyme' },
           { iconSrc: amchartsIcon, title: 'amcharts4' },
-          { iconSrc: d3Icon, title: 'd3' },
         ]
       },
       {
@@ -136,8 +132,6 @@ const CurriculumVitae = () => {
           { iconSrc: reactIcon, title: 'react-native' },
           { iconSrc: nextjsIcon, title: 'nextjs' },
           { iconSrc: gatsbyIcon, title: 'gatsby' },
-          { iconSrc: angularIcon, title: 'angular' },
-          { iconSrc: vueIcon, title: 'vue' },
         ]
       },
       {
@@ -174,22 +168,22 @@ const CurriculumVitae = () => {
       { language: 'English', proficiency: 'advanced' }
     ],
     contributions: [
-      { date: '2019', project: 'React official documentation', description: 'Contributed into translation of official documentation into Russian' },
-      { date: '2020', project: 'Gatsby official tutorial', description: 'Contributed into translation of official tutorial into Russian' }
+      { date: '2019', project: 'Reactjs Official Documentation', description: 'Contributed into translation of official documentation into Russian' },
+      { date: '2020', project: 'Gatsby Official Tutorial', description: 'Contributed into translation of official tutorial into Russian' }
     ],
     social: [
       { src: githubIcon, iconHeight: 30, href: 'https://github.com/RinatRezyapov' },
       { src: twitterIcon, iconHeight: 30, href: 'https://twitter.com/RinatRezyapov' },
-      { src: linkedinIcon, iconHeight: 30, href: 'linkedin.com/rinatrezyapov' }
+      { src: linkedinIcon, iconHeight: 30, href: 'https://www.linkedin.com/in/rinatrezyapov' }
     ]
   }
 
   return (
-    <Paper>
+    <Wrapper>
       <C1>
         <H2>{`${userData.name} ${userData.lastName}`}</H2>
         <Spacer mb={0.5} />
-        <Subtitle2 light>{userData.title}</Subtitle2>
+        <Subtitle2>{userData.title}</Subtitle2>
         <Spacer mb={2} />
         <Image
           fixed={data.avatar.childImageSharp.fixed}
@@ -205,18 +199,18 @@ const CurriculumVitae = () => {
         <CvSocial data={userData.social} />
       </C1>
       <C2>
-        <CvExperience experience={userData.experience} />
-        <Spacer mb={2} />
+        <CvExperience experience={userData.experience} />   
+      </C2>
+      <C2>
+       <CvSkills skills={userData.skills} /> 
+       <Spacer mb={2} />
         <CvEducation education={userData.education} />
         <Spacer mb={2} />
         <CvLanguages languages={userData.languages} />
         <Spacer mb={2} />
-        <CvCommunityContribution contributions={userData.contributions} />       
+        <CvCommunityContribution contributions={userData.contributions} />    
       </C2>
-      <C2>
-       <CvSkills skills={userData.skills} /> 
-      </C2>
-    </Paper>
+    </Wrapper>
   )
 }
 
@@ -236,17 +230,20 @@ export const Spacer = styled.div<ISpacerProps>`
   margin-left: ${({ ml }) => ml ? ml + 'rem' : 0};
 `;
 
-const Paper = styled.div`
+const Wrapper = styled.div`
   font-family: Montserrat, sans-serif;
   width: 960px;
   margin: 0 auto;
   display: flex;
-  box-shadow: 0px 3px 15px -2px hsla(0,0%,0%,0.5), 0px 3px 20px 0px hsla(0,0%,0%,0.5), 0px 1px 40px 0px hsla(0,0%,0%,0.5);
+  @media (max-width: 1024px) {
+    width: auto;
+    flex-direction: column;
+  }
 `;
 
 const C1 = styled.div`
   flex: 1;
-  background-color: #dd4a68;
+  background-color: black;
   color: white;
   display: flex;
   flex-direction: column;
@@ -257,6 +254,4 @@ const C1 = styled.div`
 const C2 = styled.div`
   flex: 1;
   padding: 3rem 1rem;
-  background-color: white;
-  color: black;
 `;

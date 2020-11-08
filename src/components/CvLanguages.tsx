@@ -1,7 +1,8 @@
 import React from "react";
 
-import { OverlineText, Subtitle2, CaptionText } from "../styles/Typography";
+import { OverlineText, Subtitle3, CaptionText } from "../styles/Typography";
 import { Spacer } from "../pages/cv";
+import styled from "styled-components";
 
 interface IUserLanguageItem {
   language: string;
@@ -17,9 +18,16 @@ const CvLanguages: React.FunctionComponent<IProps> = ({ languages }) => (
     <OverlineText>Languages</OverlineText>
     <Spacer mb={1} />
     {languages.map((v, idx) => (
-      <Subtitle2 key={idx}><b>{v.language}</b><CaptionText inline> {v.proficiency}</CaptionText></Subtitle2>
+      <Container key={idx}>
+        <Subtitle3><b>{v.language}</b></Subtitle3>&nbsp;<CaptionText inline> {v.proficiency}</CaptionText>
+      </Container>
     ))}
   </>
 )
 
 export default CvLanguages;
+
+const Container = styled.div`
+  display: flex;
+  align-items: baseline;
+`;

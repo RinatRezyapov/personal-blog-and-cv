@@ -1,7 +1,8 @@
 import React from "react";
 
-import { OverlineText, Subtitle2, Body2, Subtitle1 } from "../styles/Typography";
+import { OverlineText, Subtitle2, Body2, CaptionText, gradientMixin } from "../styles/Typography";
 import { Spacer } from "../pages/cv";
+import styled from "styled-components";
 
 interface IContributionItem {
   date: string;
@@ -20,8 +21,8 @@ const CvCommunityContribution: React.FunctionComponent<IProps> = ({ contribution
     <Spacer mb={1} />
     {contributions.map((v, idx) => (
       <div key={idx}>
-        <Subtitle1>{v.date}</Subtitle1>
-        <Subtitle2>{v.project}</Subtitle2>
+        <CaptionText>{v.date}</CaptionText>
+        <ContributionText>{v.project}</ContributionText>
         <Body2>{v.description}</Body2>
         <Spacer mb={0.5} />
       </div>
@@ -31,3 +32,7 @@ const CvCommunityContribution: React.FunctionComponent<IProps> = ({ contribution
 )
 
 export default CvCommunityContribution;
+
+export const ContributionText = styled(Subtitle2)`
+  ${gradientMixin}
+`;

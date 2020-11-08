@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { OverlineText, Subtitle2, CaptionText, Body2, Subtitle1, Subtitle3 } from "../styles/Typography";
+import { OverlineText, Subtitle2, CaptionText, Body2, Subtitle3, gradientMixin } from "../styles/Typography";
 
 interface IUserExperienceItem {
   date: string;
@@ -21,9 +21,12 @@ const CvExperience: React.FunctionComponent<IProps> = ({ experience }) => (
     <div>
       {experience.map((v, idx) => (
         <ExperienceContainer key={idx}>
-          <Subtitle1>{v.date}</Subtitle1>
-          <Subtitle2>{v.company.title}</Subtitle2>
-          <Subtitle3>{v.position}</Subtitle3>
+          <TitleDateContainer>
+            <Subtitle2>{v.company.title}</Subtitle2>
+            &nbsp;
+            <Subtitle3 color="grey">{v.date}</Subtitle3>
+          </TitleDateContainer>
+          <GradientText>{v.position}</GradientText>
           {v.description.map((desc, idx) => <Body2 key={idx}>{desc}</Body2>)}
           <CaptionText>{v.location}</CaptionText>
         </ExperienceContainer>
@@ -39,4 +42,18 @@ const ExperienceContainer = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
+`;
+
+const TitleDateContainer = styled.div`
+  display: flex;
+  align-items: baseline;
+`;
+
+export const GradientText = styled.span`
+  font-family: Montserrat, sans-serif;
+  font-style: inherit;
+  font-size: 0.875rem;
+  line-height: 1.57;
+  font-weight: 600;
+  ${gradientMixin}
 `;

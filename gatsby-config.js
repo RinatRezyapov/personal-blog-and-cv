@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Simply about web`,
+    title: `On The Road Of Web Development`,
     author: {
       name: `Rinat Rezyapov`,
       summary: ``

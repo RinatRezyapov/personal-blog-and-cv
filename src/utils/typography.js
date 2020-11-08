@@ -5,10 +5,18 @@ import Wordpress2016 from "typography-theme-wordpress-2016"
 Wordpress2016.overrideThemeStyles = () => {
   return {
     a: {
-      color: '#dd4a68'
+      color: 'white'
     },
     h3: {
-      color: '#dd4a68'
+      fontFamily: "Montserrat, sans-serif",
+      fontWeight: 900,
+      textRendering: "optimizeLegibility",
+      color: 'white',
+      background: "linear-gradient(90deg,#ec6192 4.44%,#ec4c34 21.45%,#ffbd2b 37.21%,#ebde56 54.63%,#57c754 70.8%,#53a1eb 84.07%) 0 100% transparent no-repeat",
+      backgroundClip: "text",
+      '-webkit-background-clip': 'text',
+      '-webkit-text-fill-color': 'transparent',
+
     },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,

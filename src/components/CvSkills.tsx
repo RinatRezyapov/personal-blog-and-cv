@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { OverlineText, Subtitle2, CaptionText, Body2, Subtitle1, Subtitle3 } from "../styles/Typography";
+import { OverlineText, Subtitle2, CaptionText, Subtitle1, Subtitle3 } from "../styles/Typography";
 import { Spacer } from "../pages/cv";
 
 interface ISkillData {
@@ -25,7 +25,7 @@ const CvSkills: React.FunctionComponent<IProps> = ({ skills }) => (
     <Spacer mb={1} />
     {skills.map((skill, idx) => (
       <div key={idx}>
-        <Subtitle2>{skill.title}</Subtitle2>
+        <CaptionText>{skill.title}</CaptionText>
         {skill.data.map((skillItem, idx) => (
           <Chip key={idx} icon={skillItem.iconSrc} title={skillItem.title} round={skillItem.round} />
         ))}
@@ -41,10 +41,12 @@ export default CvSkills;
 const SkillChip = styled.span`
   display: inline-flex;
   align-items: center;
-  border: 1px solid lightgrey;
-  border-radius: 16px;
+  border-radius: 8px;
   height: 32px;
   margin: 4px;
+  background-clip: content-box,border-box;
+  background-image: linear-gradient(#111,#111),linear-gradient(90deg,#333,#333);
+  padding: 1px;
 `;
 
 interface ISkillChipImgProps {
@@ -55,11 +57,12 @@ const SkillChipImg = styled.img<ISkillChipImgProps>`
   height: 20px;
   margin: 0 -6px 0 6px;
   border-radius: ${({ round }) => round ? '50%' : 'none'}
+
 `;
 
 const SkillChipContent = styled.span` 
   font-size: 0.7rem;
-  color: #1c0f43;  
+  color: white;  
   padding: 0 12px;
 `;
 
