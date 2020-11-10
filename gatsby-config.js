@@ -66,7 +66,7 @@ module.exports = {
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `black`,
+        theme_color: '#24292e',
         display: `minimal-ui`,
         icon: `content/assets/icon.png`
       }
