@@ -1,10 +1,15 @@
 import styled, { css } from "styled-components";
 
-export const H2 = styled.h2`
+export const H2 = styled.h2<ITypographyProps>`
+  color: ${({ color }) => color || 'white'};
   font-family: Montserrat, sans-serif;
   font-size: 1.75rem;
   line-height: 1.2;
   margin: 0 0 0.3rem 0;
+  background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 interface ITypographyProps {
@@ -82,15 +87,17 @@ export const CaptionText = styled.span<ICaptionTextProps>`
   font-size: 0.65rem;
   font-weight: 400;
   line-height: 1.66;
-  color: grey;
+  color: #a7a7a7;
   margin-bottom: 0.3rem;
   display: ${({ inline }) => inline ? 'inline' : 'block'};
 `;
 
 
 export const gradientMixin = css`
-  background: linear-gradient(90deg,#ec6192 4.44%,#ec4c34 21.45%,#ffbd2b 37.21%,#ebde56 54.63%,#57c754 70.8%,#53a1eb 84.07%) 0 100% transparent no-repeat;
+  background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
+
+//  background: linear-gradient(90deg,#ec6192 4.44%,#ec4c34 21.45%,#ffbd2b 37.21%,#ebde56 54.63%,#57c754 70.8%,#53a1eb 84.07%) 0 100% transparent no-repeat;

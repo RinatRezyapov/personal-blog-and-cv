@@ -8,16 +8,13 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import styled from "styled-components";
 
 import { rhythm } from "../utils/typography"
 
 const IMAGE_STYLE = {
-  fontFamily: "Montserrat, sans-serif",
   marginBottom: 0,
   borderRadius: `50%`,
-  backgroundClip: "content-box,border-box",
-  backgroundImage: "linear-gradient(#111,#111),linear-gradient(90deg,#ec6192,#ec4c34,#ffbd2b,#ebde56,#57c754,#53a1eb)",
-  padding: "4px",
 };
 
 const Bio = () => {
@@ -65,30 +62,36 @@ const Bio = () => {
         }}
         imgStyle={IMAGE_STYLE}
       />
-      <p>
+      <HeadlineSection>
         Personal blog by
         {' '}
-        <a href={`https://twitter.com/${social.twitter}`} target='_blank'>
-          <strong>
+        <Link to={`/cv`}>
+          <strong >
             {author.name}
           </strong>
-        </a>
+        </Link>
         <div>
           {author.summary}
           <div>
-            <Link to={`/cv`}>Curriculum Vitae</Link>
-            {' | '}
             <a href={`https://twitter.com/${social.twitter}`} target='_blank'>Twitter</a>
             {' | '}
             <a href={`https://github.com/${social.github}`} target='_blank'>Github</a>
             {' | '}
             <a href={`https://linkedin.com/in/${social.linkedin}`} target='_blank'>Linkedin</a>
+            {' | '}
+            <Link to={`/cv`}>CV</Link>
           </div>
         </div>
 
-      </p>
+      </HeadlineSection>
     </div>
   )
 }
 
-export default Bio
+export default Bio;
+
+const HeadlineSection = styled.p`
+  a {
+    -webkit-text-fill-color: white;
+  }
+`;

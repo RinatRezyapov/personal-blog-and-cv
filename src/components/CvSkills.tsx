@@ -8,6 +8,7 @@ interface ISkillData {
   iconSrc: any;
   title: string;
   round?: boolean; 
+  href: string;
 }
 
 interface IUserSkillItem {
@@ -26,7 +27,7 @@ const CvSkills: React.FunctionComponent<IProps> = ({ skills }) => (
       <div key={idx}>
         <CaptionText>{skill.title}</CaptionText>
         {skill.data.map((skillItem, idx) => (
-          <Chip key={idx} icon={skillItem.iconSrc} title={skillItem.title} round={skillItem.round} />
+          <Chip key={idx} href={skillItem.href} icon={skillItem.iconSrc} title={skillItem.title} round={skillItem.round} />
         ))}
         <Spacer mb={0.5} />
       </div>
@@ -38,14 +39,18 @@ export default CvSkills;
 
 
 const SkillChip = styled.span`
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   border-radius: 8px;
   height: 32px;
   margin: 4px;
-  background-clip: content-box,border-box;
-  background-image: linear-gradient(#111,#111),linear-gradient(90deg,#333,#333);
   padding: 1px;
+  background-clip: content-box,border-box;
+  background-image: linear-gradient(#24292e,#1f1f1fe6),linear-gradient(90deg,#333,#333);
+  &:hover {
+    background-image: linear-gradient(#24292e,#060606e6),linear-gradient(90deg,#333,#333);
+  }
 `;
 
 interface ISkillChipImgProps {
@@ -59,17 +64,19 @@ const SkillChipImg = styled.img<ISkillChipImgProps>`
 
 `;
 
-const SkillChipContent = styled.span` 
+const SkillChipContent = styled.a` 
   font-size: 0.7rem;
   color: white;  
   padding: 0 12px;
+  box-shadow: none;
+  -webkit-text-fill-color: white;
 `;
 
 
-const Chip = ({ icon, title, round = false }) => (
+const Chip = ({ icon, title, href, round = false }) => (
   <SkillChip>
     <SkillChipImg src={icon} round={round} />
-    <SkillChipContent>
+    <SkillChipContent href={href} target="_blank">
       {title}
     </SkillChipContent>
   </SkillChip>

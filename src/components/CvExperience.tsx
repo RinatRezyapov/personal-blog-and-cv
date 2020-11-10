@@ -24,7 +24,7 @@ const CvExperience: React.FunctionComponent<IProps> = ({ experience }) => (
           <TitleDateContainer>
             <Subtitle2>{v.company.title}</Subtitle2>
             &nbsp;
-            <Subtitle3 color="grey">{v.date}</Subtitle3>
+            <Subtitle3 color="#a7a7a7">{v.date}</Subtitle3>
           </TitleDateContainer>
           <GradientText>{v.position}</GradientText>
           {v.description.map((desc, idx) => <Body2 key={idx}>{desc}</Body2>)}

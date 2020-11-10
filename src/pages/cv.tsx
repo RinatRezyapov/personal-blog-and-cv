@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 
 import linkedinIcon from '../../content/assets/linkedin-icon.svg'
@@ -30,6 +30,7 @@ import fptsIcon from '../../content/assets/fp-ts-icon.png'
 import enzymeIcon from '../../content/assets/enzyme-icon.png'
 import amchartsIcon from '../../content/assets/amcharts-icon.svg'
 import nextjsIcon from '../../content/assets/nextjs-icon.svg'
+import backArrowIcon from '../../content/assets/back-arrow.svg'
 import styledComponentsIcon from '../../content/assets/styled-components.png'
 import { Subtitle2, H2, gradientMixin } from "../styles/Typography";
 import CvExperience from "../components/CvExperience";
@@ -51,9 +52,7 @@ const IMAGE_COMPONENT_STYLE = {
 const IMAGE_STYLE = {
   marginBottom: 0,
   borderRadius: `50%`,
-  backgroundClip: "content-box,border-box",
-  backgroundImage: "linear-gradient(#111,#111),linear-gradient(90deg,#ec6192,#ec4c34,#ffbd2b,#ebde56,#57c754,#53a1eb)",
-  padding: "4px",
+  border: '2px solid white'
 };
 
 const CurriculumVitae = () => {
@@ -103,56 +102,56 @@ const CurriculumVitae = () => {
       {
         title: 'Languages',
         data: [
-          { iconSrc: javascriptIcon, title: 'JavaScript' },
-          { iconSrc: typescriptIcon, title: 'TypeScript', round: true },
-          { iconSrc: htmlIcon, title: 'HTML' },
-          { iconSrc: cssIcon, title: 'CSS' },
+          { iconSrc: javascriptIcon, title: 'JavaScript', href: "https://en.wikipedia.org/wiki/JavaScript" },
+          { iconSrc: typescriptIcon, title: 'TypeScript', href: "https://www.typescriptlang.org", round: true },
+          { iconSrc: htmlIcon, title: 'HTML', href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+          { iconSrc: cssIcon, title: 'CSS', href: "https://www.w3.org/Style/CSS" },
         ]
       },
       {
         title: 'Libraries',
         data: [
-          { iconSrc: reactIcon, title: 'react' },
-          { iconSrc: reduxIcon, title: 'redux' },
-          { iconSrc: materialUiIcon, title: 'material-ui' },
-          { iconSrc: styledComponentsIcon, title: 'styled-components' },
-          { iconSrc: tailwindcssIcon, title: 'tailwindcss' },
-          { iconSrc: draftjsIcon, title: 'draftjs' },
-          { iconSrc: lodashIcon, title: 'lodash' },
-          { iconSrc: dateFnsIcon, title: 'date-fns' },
-          { iconSrc: fptsIcon, title: 'fp-ts', round: true },
-          { iconSrc: jestIcon, title: 'jest' },
-          { iconSrc: enzymeIcon, title: 'enzyme' },
-          { iconSrc: amchartsIcon, title: 'amcharts4' },
+          { iconSrc: reactIcon, title: 'reactjs', href: "https://reactjs.org/" },
+          { iconSrc: reduxIcon, title: 'redux', href: "https://redux.js.org/" },
+          { iconSrc: materialUiIcon, title: 'material-ui', href: "https://material-ui.com/" },
+          { iconSrc: styledComponentsIcon, title: 'styled-components', href: "https://styled-components.com/" },
+          { iconSrc: tailwindcssIcon, title: 'tailwindcss', href: "https://tailwindcss.com/" },
+          { iconSrc: draftjsIcon, title: 'draftjs', href: "https://draftjs.org/" },
+          { iconSrc: lodashIcon, title: 'lodash', href: "https://lodash.com/" },
+          { iconSrc: dateFnsIcon, title: 'date-fns', href: "https://date-fns.org/" },
+          { iconSrc: fptsIcon, title: 'fp-ts', round: true, href: "https://gcanti.github.io/fp-ts/" },
+          { iconSrc: jestIcon, title: 'jest', href: "https://jestjs.io/" },
+          { iconSrc: enzymeIcon, title: 'enzyme', href: "https://enzymejs.github.io/enzyme" },
+          { iconSrc: amchartsIcon, title: 'amcharts4', href: "https://www.amcharts.com/docs/v4/" },
         ]
       },
       {
         title: 'Frameworks',
         data: [
-          { iconSrc: reactIcon, title: 'react-native' },
-          { iconSrc: nextjsIcon, title: 'nextjs' },
-          { iconSrc: gatsbyIcon, title: 'gatsby' },
+          { iconSrc: reactIcon, title: 'react-native', href: "https://reactnative.dev/" },
+          { iconSrc: nextjsIcon, title: 'nextjs', href: "https://nextjs.org/" },
+          { iconSrc: gatsbyIcon, title: 'gatsby', href: "https://www.gatsbyjs.com/" },
         ]
       },
       {
         title: 'Serverless',
         data: [
-          { iconSrc: googleFirebaseIcon, title: 'Google Firebase' },
+          { iconSrc: googleFirebaseIcon, title: 'Google Firebase', href: "https://firebase.google.com/" },
         ]
       },
       {
         title: 'Vendor specific',
         data: [
-          { iconSrc: stripeIcon, title: 'Stripe' },
-          { iconSrc: sentryIcon, title: 'Sentry' }
+          { iconSrc: stripeIcon, title: 'Stripe', href: "https://stripe.com/" },
+          { iconSrc: sentryIcon, title: 'Sentry', href: "https://sentry.io/" }
         ]
       },
       {
         title: 'Tools',
         data: [
-          { iconSrc: gitIcon, title: 'git' },
-          { iconSrc: webpackIcon, title: 'webpack' },
-          { iconSrc: jiraIcon, title: 'jira' }
+          { iconSrc: gitIcon, title: 'git', href: "https://git-scm.com/" },
+          { iconSrc: webpackIcon, title: 'webpack', href: "https://webpack.js.org/" },
+          { iconSrc: jiraIcon, title: 'jira', href: "https://www.atlassian.com/ru/software/jira" }
         ]
       }
     ],
@@ -180,6 +179,7 @@ const CurriculumVitae = () => {
 
   return (
     <Wrapper>
+      <Link to={`/`}><BackIcon src={backArrowIcon} /></Link>
       <C1>
         <H2>{`${userData.name} ${userData.lastName}`}</H2>
         <Spacer mb={0.5} />
@@ -244,8 +244,6 @@ const Wrapper = styled.div`
 
 const C1 = styled.div`
   flex: 1;
-  background-color: black;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -255,4 +253,17 @@ const C1 = styled.div`
 const C2 = styled.div`
   flex: 1;
   padding: 1rem;
+`;
+
+const BackIcon = styled.img`
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 15px;
+  top: 15px;
+  opacity: 70%;
+  cursor: pointer;
+  &:hover {
+    opacity: 100%;
+  } 
 `;
