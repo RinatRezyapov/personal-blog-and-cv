@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const H2 = styled.h2<ITypographyProps>`
-  color: ${({ color }) => color || 'white'};
+  color: ${({ color }) => color || 'inherit'};
   font-family: Montserrat, sans-serif;
   font-size: 1.75rem;
   line-height: 1.2;
@@ -24,7 +24,7 @@ export const OverlineText = styled.span<ITypographyProps>`
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   line-height: 2.66;
-  color: ${({ color }) => color || 'white'};
+  color: ${({ color }) => color || 'inherit'};
   margin: 0 0 0.3rem 0;
 `;
 
@@ -35,7 +35,7 @@ export const Subtitle1 = styled.h6<ITypographyProps>`
   line-height: 1.75;
   font-size: 0.8rem;
   font-weight: 600;
-  color: ${({ color }) => color || 'white'};
+  color: ${({ color }) => color || 'inherit'};
   margin: 0 0 0.3rem 0;
 `;
 
@@ -45,7 +45,7 @@ export const Subtitle2 = styled.h6<ITypographyProps>`
   font-size: 0.875rem;
   line-height: 1.57;
   font-weight: 600;
-  color: ${({ color }) => color || 'white'};
+  color: ${({ color }) => color || 'inherit'};
   margin: 0 0 0.3rem 0;
 `;
 
@@ -55,7 +55,7 @@ export const Subtitle3 = styled.h6<ITypographyProps>`
   font-size: 0.75rem;
   line-height: 1.35;
   font-weight: 400;
-  color: ${({ color }) => color || 'white'};
+  color: ${({ color }) => color || 'inherit'};
   margin: 0 0 0.3rem 0;
 `;
 
@@ -64,7 +64,7 @@ export const Body1 = styled.span<ITypographyProps>`
   font-size: .9rem;
   line-height: 1.075rem;
   font-weight: 400;
-  color: ${({ color }) => color || 'white'};
+  color: ${({ color }) => color || 'inherit'};
   margin: 0 0 0.3rem 0;
 `;
 
@@ -73,7 +73,7 @@ export const Body2 = styled.p<ITypographyProps>`
   font-size: 0.8rem;
   line-height: 1rem;
   font-weight: 400;
-  color: ${({ color }) => color || 'white'};
+  color: ${({ color }) => color || 'inherit'};
   margin: 0 0 0.3rem 0;
 `;
 

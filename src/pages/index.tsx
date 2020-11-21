@@ -6,6 +6,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import styled from "styled-components"
 
 type Data = {
   site: {
@@ -48,9 +49,9 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                <GradientTitle to={node.fields.slug}>
                   {title}
-                </Link>
+                </GradientTitle>
               </h3>
               <small>{node.frontmatter.date}</small>
             </header>
@@ -94,3 +95,11 @@ export const pageQuery = graphql`
     }
   }
 `
+
+const GradientTitle = styled(Link)`
+  box-shadow: none;     
+  background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
+  backgroundClip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;

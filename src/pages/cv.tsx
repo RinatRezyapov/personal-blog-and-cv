@@ -20,18 +20,18 @@ import lodashIcon from '../../content/assets/lodash-icon.svg'
 import draftjsIcon from '../../content/assets/draftjs-icon.svg'
 import materialUiIcon from '../../content/assets/material-ui.svg'
 import reduxIcon from '../../content/assets/redux-icon.svg'
-import tailwindcssIcon from '../../content/assets/tailwindcss-icon.png'
+import tailwindcssIcon from '../../content/assets/tailwindcss-icon.svg'
 import reactIcon from '../../content/assets/react-icon.svg'
-import cssIcon from '../../content/assets/css-icon.png'
-import javascriptIcon from '../../content/assets/javascript-icon.png'
-import typescriptIcon from '../../content/assets/typescript-icon.png'
-import htmlIcon from '../../content/assets/html-icon.png'
-import fptsIcon from '../../content/assets/fp-ts-icon.png'
-import enzymeIcon from '../../content/assets/enzyme-icon.png'
+import cssIcon from '../../content/assets/css-icon.svg'
+import javascriptIcon from '../../content/assets/javascript-icon.svg'
+import typescriptIcon from '../../content/assets/typescript-icon.svg'
+import htmlIcon from '../../content/assets/html-icon.svg'
+import fptsIcon from '../../content/assets/fp-ts-icon.svg'
+import enzymeIcon from '../../content/assets/enzyme-icon.svg'
 import amchartsIcon from '../../content/assets/amcharts-icon.svg'
 import nextjsIcon from '../../content/assets/nextjs-icon.svg'
 import backArrowIcon from '../../content/assets/back-arrow.svg'
-import styledComponentsIcon from '../../content/assets/styled-components.png'
+import styledComponentsIcon from '../../content/assets/styled-components-icon.svg'
 import { Subtitle2, H2, gradientMixin } from "../styles/Typography";
 import CvExperience from "../components/CvExperience";
 import CvEducation from "../components/CvEducation";
@@ -103,7 +103,7 @@ const CurriculumVitae = () => {
         title: 'Languages',
         data: [
           { iconSrc: javascriptIcon, title: 'JavaScript', href: "https://en.wikipedia.org/wiki/JavaScript" },
-          { iconSrc: typescriptIcon, title: 'TypeScript', href: "https://www.typescriptlang.org", round: true },
+          { iconSrc: typescriptIcon, title: 'TypeScript', href: "https://www.typescriptlang.org" },
           { iconSrc: htmlIcon, title: 'HTML', href: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
           { iconSrc: cssIcon, title: 'CSS', href: "https://www.w3.org/Style/CSS" },
         ]
@@ -119,7 +119,7 @@ const CurriculumVitae = () => {
           { iconSrc: draftjsIcon, title: 'draftjs', href: "https://draftjs.org/" },
           { iconSrc: lodashIcon, title: 'lodash', href: "https://lodash.com/" },
           { iconSrc: dateFnsIcon, title: 'date-fns', href: "https://date-fns.org/" },
-          { iconSrc: fptsIcon, title: 'fp-ts', round: true, href: "https://gcanti.github.io/fp-ts/" },
+          { iconSrc: fptsIcon, title: 'fp-ts', href: "https://gcanti.github.io/fp-ts/" },
           { iconSrc: jestIcon, title: 'jest', href: "https://jestjs.io/" },
           { iconSrc: enzymeIcon, title: 'enzyme', href: "https://enzymejs.github.io/enzyme" },
           { iconSrc: amchartsIcon, title: 'amcharts4', href: "https://www.amcharts.com/docs/v4/" },

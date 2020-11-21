@@ -63,30 +63,19 @@ const Bio = () => {
         imgStyle={IMAGE_STYLE}
       />
       <HeadlineSection>
-        Personal blog by
-        {' '}
+        Personal blog by{' '}
         <Link to={`/cv`}>
-          <strong >
-            {author.name}
-          </strong>
+          {author.name}
         </Link>
         <div>
           {author.summary}
-          <div>
-            <a href={`https://twitter.com/${social.twitter}`} target='_blank'>Twitter</a>
-            {' | '}
-            <a href={`https://github.com/${social.github}`} target='_blank'>Github</a>
-            {' | '}
-            <a href={`https://linkedin.com/in/${social.linkedin}`} target='_blank'>Linkedin</a>
-            {' | '}
-            <Link to={`/cv`}>CV</Link>
-          </div>
         </div>
 
       </HeadlineSection>
     </div>
   )
 }
+
 
 export default Bio;
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import styled from "styled-components";
 import { rhythm, scale } from "../utils/typography"
 
 const Layout = ({ location, title, children }) => {
@@ -18,15 +18,11 @@ const Layout = ({ location, title, children }) => {
           fontSize: '2rem'
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
+        <GradientTitle
           to={`/`}
         >
           {title}
-        </Link>
+        </GradientTitle>
       </h1>
     )
   } else {
@@ -36,15 +32,11 @@ const Layout = ({ location, title, children }) => {
           marginTop: 0,
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
+        <GradientTitle
           to={`/`}
         >
           {title}
-        </Link>
+        </GradientTitle>
       </h3>
     )
   }
@@ -60,12 +52,22 @@ const Layout = ({ location, title, children }) => {
       <header>{header}</header>
       <main>{children}</main>
       <footer>
-        {new Date().getFullYear()}, Built with
-        {` `}
-        <a style={{ '-webkit-text-fill-color': 'white' }} href="https://www.gatsbyjs.org">Gatsby</a>
+        <a href={`https://github.com/RinatRezyapov`} target='_blank'>github</a>
+            {' • '}
+        <a href={`https://www.linkedin.com/in/rinatrezyapov/`} target='_blank'>linkedin</a>
+            {' • '}
+        <a href={`https://twitter.com/RinatRezyapov`} target='_blank'>twitter</a>
       </footer>
     </div>
   )
 }
 
 export default Layout
+
+const GradientTitle = styled(Link)`
+  box-shadow: none;     
+  background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
+  backgroundClip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;

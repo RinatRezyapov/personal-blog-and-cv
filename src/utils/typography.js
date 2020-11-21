@@ -6,10 +6,6 @@ Wordpress2016.overrideThemeStyles = () => {
   return {
     a: {
       color: 'white',
-      background: "linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%)",
-      backgroundClip: "text",
-      '-webkit-background-clip': 'text',
-      '-webkit-text-fill-color': 'transparent',
     },
     h3: {
       fontFamily: "Montserrat, sans-serif",
