@@ -4,6 +4,8 @@ date: "2020-11-20T16:12:03.284Z"
 description: "Introduction to functional programming with Option container for beginners"
 ---
 
+## Introduction
+
 When we develop web applications using React and TypeScript we often pass optional props between components.
 
 A common way to show that a prop is optional is to indicate it with a question mark (?) in TypeScript interface:
@@ -49,6 +51,8 @@ If there are no countries in the array then you won't see any `options` in `sele
 ```
 
 So what if we will use this "empty array and array with items" approach to indicate absence or presence of just one value of any type? 
+
+## Option to the rescue
 
 This is how `Option` container works.
 
@@ -153,10 +157,10 @@ To create a container from our optional label variable we will import `fromNulla
 
 ```jsx
   const Fruit: React.FC<IProps> = ({ label }) => {
-  const container = fromNullable(label);
+    const container = fromNullable(label);
 
-  return <h1>The fruit name is: {label}</h1>;
-};
+    return <h1>The fruit name is: {label}</h1>;
+  };
 ```
 <a href="https://codesandbox.io/s/fruit-app-with-option-fn85z?file=/src/App.tsx" target="_blank">Example</a>
 
