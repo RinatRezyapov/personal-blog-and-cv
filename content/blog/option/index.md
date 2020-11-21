@@ -274,7 +274,7 @@ What is `chain`? When we use `fromNullable` inside another container we create n
 
 The other good thing is that now you almost don't need to create optional values or explicitly set value to `undefined` or `null`. If you want to indicate that name value can be undefined you just specify it in TypeScript interface as `Option<string>`.
 
-If you have a string value to pass, you pass it as `some<'Bob'>`.
+If you have a string value to pass, you pass it as `some('Bob')`.
 
 If you don't have a string to pass, you pass it as `none`.
 
