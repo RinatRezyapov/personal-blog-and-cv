@@ -73,7 +73,7 @@ It's that simple. I'm not going to overwhelm you with Functional Programming the
 
 You can write your own `Option` container or use some already written solution.
 
-I like this one https://github.com/gcanti/fp-ts
+I like this <a href="https://github.com/gcanti/fp-ts" target="_blank" rel="noopener">one</a>
 
 Let's create a container that consists of a string value.
 
@@ -103,7 +103,7 @@ pipe(
 )
 
 ```
-<a href="https://codesandbox.io/s/fromnullable-string-value-y4xzw" target="_blank">Example</a>
+<a href="https://codesandbox.io/s/fromnullable-string-value-y4xzw" target="_blank" rel="noopener">Example</a>
 
 
 But what if we pass the undefined value to `fromNullable` function?
@@ -124,7 +124,7 @@ pipe(
   // this value won't appear in the console, because map won't fire
 )
 ```
-<a href="https://codesandbox.io/s/fromnullable-undefined-0mrme?file=/src/index.ts" target="_blank">Example</a>
+<a href="https://codesandbox.io/s/fromnullable-undefined-0mrme?file=/src/index.ts" target="_blank" rel="noopener">Example</a>
 
 As you can see, we will get `None` container.
 
@@ -151,7 +151,7 @@ Let's create React app that renders `Fruit` components with optional label prop.
 
   export default App;
 ```
-<a href="https://codesandbox.io/s/fruit-app-3rdwf?file=/src/App.tsx" target="_blank">Example</a>
+<a href="https://codesandbox.io/s/fruit-app-3rdwf?file=/src/App.tsx" target="_blank" rel="noopener">Example</a>
 
 To create a container from our optional label variable we will import `fromNullable` function from `fp-ts` library, pass `label` prop to it and assign the result to `container` variable;
 
@@ -162,7 +162,7 @@ To create a container from our optional label variable we will import `fromNulla
     return <h1>The fruit name is: {label}</h1>;
   };
 ```
-<a href="https://codesandbox.io/s/fruit-app-with-option-fn85z?file=/src/App.tsx" target="_blank">Example</a>
+<a href="https://codesandbox.io/s/fruit-app-with-option-fn85z?file=/src/App.tsx" target="_blank" rel="noopener">Example</a>
 
 We can't render `container` variable straight away because right now it's an object. So we need to find out the way to extract this value from the container.
 
@@ -185,7 +185,7 @@ const Fruit: React.FC<IProps> = ({ label }) => {
   return <h1>The fruit name is: {value}</h1>;
 };
 ```
-<a href="https://codesandbox.io/s/fruit-app-with-option-extracting-value-94kq3?file=/src/App.tsx" target="_blank">Example</a>
+<a href="https://codesandbox.io/s/fruit-app-with-option-extracting-value-94kq3?file=/src/App.tsx" target="_blank" rel="noopener">Example</a>
 
 Now we understand how to extract value from `Some` container, e.g. container that consists value.
 
@@ -211,7 +211,7 @@ const App = () => {
   );
 };
 ```
-<a href="https://codesandbox.io/s/fruit-app-with-option-none-extracting-value-frdun?file=/src/App.tsx" target="_blank">Example</a>
+<a href="https://codesandbox.io/s/fruit-app-with-option-none-extracting-value-frdun?file=/src/App.tsx" target="_blank" rel="noopener">Example</a>
 
 We will see in the example above that in this case placeholder value will be shown `can't read the name of the fruit`. That's because `fromNullable` function created `None` and `getOrElse` function wasn't able to extract value from `None` falling back to placeholder value.
 
@@ -267,7 +267,7 @@ And that's how we do it with `Option` container:
     // we try to get the value, if we can't we return default value of the same type
   );
 ```
-<a href="https://codesandbox.io/s/fruit-app-with-option-deeply-nested-optional-values-jqti5?file=/src/App.tsx" target="_blank">Example</a>
+<a href="https://codesandbox.io/s/fruit-app-with-option-deeply-nested-optional-values-jqti5?file=/src/App.tsx" target="_blank" rel="noopener">Example</a>
 
 Why we use several `fromNullable` in the example above? Because any possibly undefined values should be wrapped in a container.
 
@@ -338,7 +338,7 @@ const App = () => {
 };
 
 ```
-<a href="https://codesandbox.io/s/fruit-app-with-option-object-with-option-fields-ouvrj?file=/src/App.tsx" target="_blank">Example</a>
+<a href="https://codesandbox.io/s/fruit-app-with-option-object-with-option-fields-ouvrj?file=/src/App.tsx" target="_blank" rel="noopener">Example</a>
 
 ## Check condition
 
@@ -364,7 +364,7 @@ const isBob = pipe(
   getOrElse(() => false)
 );
 ```
-<a href="https://codesandbox.io/s/fruit-app-with-option-check-condition-zsbi2?file=/src/App.tsx" target="_blank">Example</a>
+<a href="https://codesandbox.io/s/fruit-app-with-option-check-condition-zsbi2?file=/src/App.tsx" target="_blank" rel="noopener">Example</a>
 
 Here we use `map` from `fp-ts` to access `Option` container, but we are not extracting email value with `getOrElse` right away. First, we take string value (email) and convert it to boolean with strict equality check and only then we extract boolean value with `getOrElse` with default value `false`.
 
@@ -397,7 +397,7 @@ const App = () => {
   );
 };
 ```
-<a href="https://codesandbox.io/s/fruit-app-with-option-performing-side-effects-kgtdh?file=/src/App.tsx" target="_blank">Example</a>
+<a href="https://codesandbox.io/s/fruit-app-with-option-performing-side-effects-kgtdh?file=/src/App.tsx" target="_blank" rel="noopener">Example</a>
 
 ## Conclusion
 
