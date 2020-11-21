@@ -69,6 +69,10 @@ const SEO = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `twitter:image`,
+          content: 'https://rinat-rezyapov.netlify.app/icons/icon-512x512.png',
+        },
       ].concat(meta)}
     />
   )
