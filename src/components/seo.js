@@ -71,7 +71,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:image`,
-          content: 'https://rinat-rezyapov.netlify.app/logo.svg',
+          content: 'https://rinat-rezyapov.netlify.app/logo.png',
         },
       ].concat(meta)}
     />
