@@ -73,7 +73,7 @@ It's that simple. I'm not going to overwhelm you with Functional Programming the
 
 You can write your own `Option` container or use some already written solution.
 
-I like this <a href="https://github.com/gcanti/fp-ts" target="_blank" rel="noopener">one</a>
+I like this <a href="https://github.com/gcanti/fp-ts" target="_blank" rel="noopener">one</a>.
 
 Let's create a container that consists of a string value.
 
