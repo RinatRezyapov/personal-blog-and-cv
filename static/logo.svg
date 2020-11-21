@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#212528;}
+	.st1{fill:none;}
+	.st2{font-family:'Montserrat-Black';}
+	.st3{font-size:500px;}
+	.st4{fill:url(#SVGID_1_);}
+</style>
+<g>
+	<rect y="0" class="st0" width="512" height="512"/>
+</g>
+<g>
+	<rect x="68.8" y="55.5" class="st1" width="377" height="398"/>
+	<text transform="matrix(1 0 0 1 68.75 426.4941)" class="st2 st3">R</text>
+	<g>
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="97.25" y1="251.4941" x2="432.75" y2="251.4941">
+			<stop  offset="0.1209" style="stop-color:#BCA1F7"/>
+			<stop  offset="0.4258" style="stop-color:#E577B4"/>
+			<stop  offset="0.8496" style="stop-color:#FF7170"/>
+		</linearGradient>
+		<path class="st4" d="M247.3,338.5h-32v88h-118v-350h168.5c32.3,0,60.5,5.3,84.5,16c24,10.7,42.5,26,55.5,46s19.5,43.3,19.5,70
+			c0,25-5.7,46.8-17,65.5c-11.3,18.7-27.7,33.5-49,44.5l73.5,108h-126L247.3,338.5z M294.3,178.2c-8-7.2-20-10.8-36-10.8h-43v82h43
+			c16,0,28-3.6,36-10.8c8-7.2,12-17.3,12-30.3S302.3,185.4,294.3,178.2z"/>
+	</g>
+</g>
+</svg>
