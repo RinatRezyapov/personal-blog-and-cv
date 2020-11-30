@@ -32,7 +32,7 @@ import amchartsIcon from '../../content/assets/amcharts-icon.svg'
 import nextjsIcon from '../../content/assets/nextjs-icon.svg'
 import backArrowIcon from '../../content/assets/back-arrow.svg'
 import styledComponentsIcon from '../../content/assets/styled-components-icon.svg'
-import { Subtitle2, H2, gradientMixin } from "../styles/Typography";
+import { Subtitle2, Title, gradientMixin } from "../styles/Typography";
 import CvExperience from "../components/CvExperience";
 import CvEducation from "../components/CvEducation";
 import CvLanguages from "../components/CvLanguages";
@@ -80,21 +80,21 @@ const CurriculumVitae = () => {
         date: 'May 2019 - Present',
         company: { link: '', title: 'InCountry' },
         position: 'Senior Front-end Developer',
-        description: ['Working on the main Portal product and other internal web applications at San Francisco based startup - InCountry', 'In my role as a senior front-end developer I introduced React Hooks API, TypeScript and Next.js to the existing Portal application', `In addition to web development I'm acting as front-end team lead for small team of front-end developers and designers`, `The duties  of this role includes requirements gathering, interaction with product  owner, short and mid-range project planning and estimation, daily  prioritization of work tasks for team members, reviewing and approving designs and preparing releases for deployment`],
+        description: ['Working on the main Portal product and other internal web applications at San Francisco based startup - InCountry;', 'In my role as a senior front-end developer I introduced React Hooks API, TypeScript and Next.js to the existing Portal application;', `In addition to web development I'm acting as a Team Lead for small team of front-end developers and designers;`, `The duties  of this role includes requirements gathering, interaction with product  owner, short and mid-range project planning and estimation, daily  prioritization of work tasks for team members, reviewing and approving designs and preparing releases for deployment;`],
         location: 'San Francisco, California (Remote)'
       },
       {
         date: 'Aug 2017 - May 2019',
         company: { link: '', title: 'OBVIDA' },
         position: 'Middle Front-end Developer',
-        description: ['Worked remotely as a middle front-end developer in a distributed team (Russia, Australia)', 'Participated in development of an all-in-one CRM system functionality which includes form builder, marketing and business automation tools', 'Designed and implemented kanban and calendar for task management module utilizing such tools as react-beautiful-dnd and WebSocket push notifications', 'Improved web application (1000+ React components) performance and scalability by increasing number of reusable React components and introducing react-window in tables with a high volume of entries'],
+        description: ['Worked remotely as a middle front-end developer in a distributed team (Russia, Australia);', 'Participated in development of an all-in-one CRM system functionality which includes form builder, marketing and business automation tools;', 'Designed and implemented kanban and calendar for task management module utilizing such tools as react-beautiful-dnd and WebSocket push notifications;', 'Improved web application (1000+ React components) performance and scalability by increasing number of reusable React components and introducing react-window in tables with a high volume of entries;'],
         location: 'Pyrmont, Australia (Remote)'
       },
       {
         date: 'Jan 2016 - Aug 2017',
         company: { link: '', title: 'Bashneft-Inform' },
-        position: 'Chief IT department specialist',
-        description: ['Participated in the development of a Service Desk web application for incident management and automation support', 'Implemented ticket history module that enabled IT specialist to track the history of all the activities that have occurred to a ticket during its lifespan', 'Improved viewing experience of a web application by introducing responsive web design for mobile devices'],
+        position: 'Front-end Developer',
+        description: ['Participated in the development of a Service Desk web application for incident management and automation support;', 'Implemented ticket history module that enabled IT specialist to track the history of all the activities that have occurred to a ticket during its lifespan;', 'Improved viewing experience of a web application by introducing responsive web design for mobile devices;'],
         location: 'Ufa, Bashkortostan'
       }
     ],
@@ -167,8 +167,9 @@ const CurriculumVitae = () => {
       { language: 'English', proficiency: 'advanced' }
     ],
     contributions: [
-      { date: '2019', project: 'Reactjs Official Documentation', description: 'Contributed into translation of official documentation into Russian' },
-      { date: '2020', project: 'Gatsby Official Tutorial', description: 'Contributed into translation of official tutorial into Russian' }
+      { date: '2020', link: 'https://github.com/gatsbyjs/gatsby-ru/pull/39', project: 'Gatsby Official Tutorial', description: 'Contributed into translation of official tutorial into Russian' },
+      { date: '2019', link: 'https://github.com/reactjs/ru.reactjs.org/pull/98', project: 'Reactjs Official Documentation', description: 'Contributed into translation of official documentation into Russian' },
+      { date: '2018', link: 'https://github.com/RinatRezyapov/Vault-13', project: 'Fallout 2 game in JavaScript', description: 'Created a video tutorial about how to recreate Fallout 2 in JavaScript' }
     ],
     social: [
       { src: githubIcon, iconHeight: 30, href: 'https://github.com/RinatRezyapov' },
@@ -181,7 +182,7 @@ const CurriculumVitae = () => {
     <Wrapper>
       <Link to={`/`}><BackIcon src={backArrowIcon} /></Link>
       <C1>
-        <H2>{`${userData.name} ${userData.lastName}`}</H2>
+        <Title>{`${userData.name} ${userData.lastName}`}</Title>
         <Spacer mb={0.5} />
         <Subtitle2>{userData.title}</Subtitle2>
         <Spacer mb={2} />
@@ -231,7 +232,6 @@ export const Spacer = styled.div<ISpacerProps>`
 `;
 
 const Wrapper = styled.div`
-  font-family: Montserrat, sans-serif;
   width: 960px;
   margin: 0 auto;
   display: flex;

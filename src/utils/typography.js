@@ -1,27 +1,29 @@
 import Typography from "typography"
 import './global.css';
-import Wordpress2016 from "typography-theme-wordpress-2016"
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    a: {
-      color: 'white',
+const typography = new Typography({
+  headerFontFamily: ['Montserrat', 'sans-serif'],
+  bodyFontFamily: ['Amazon Ember', 'Montserrat', 'sans-serif'],
+  overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+    body: {
+      background: '#191d1f',
+      color: 'rgba(255, 255, 255, 0.88)',
     },
-    h3: {
-      fontFamily: "Montserrat, sans-serif",
-      fontWeight: 900,
-      textRendering: "optimizeLegibility",
-      color: 'white',
+    a: {
+      color: 'rgba(255, 255, 255, 0.88)',
+    },
+    blockquote: {
+      color: 'rgba(255, 255, 255, 0.88)',
+      borderLeftColor: 'rgba(255, 255, 255, 0.88)',
     },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
-  }
-}
-
-delete Wordpress2016.googleFonts
-
-const typography = new Typography(Wordpress2016)
+    h1: {
+      fontWeight: 900
+    }
+  })
+})
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

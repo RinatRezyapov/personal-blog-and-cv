@@ -50,7 +50,7 @@ If there are no countries in the array then you won't see any `options` in `sele
   </select>
 ```
 
-So what if we will use this "empty array and array with items" approach to indicate absence or presence of just one value of any type? 
+So what if we will use this "empty array and array with items" approach to indicate absence or presence of just one value? 
 
 ## Option to the rescue
 

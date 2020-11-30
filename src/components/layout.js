@@ -1,7 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components";
 import { rhythm, scale } from "../utils/typography"
+import { GradientLink } from "../styles/Typography"
 
 const Layout = ({ location, title, children }) => {
 
@@ -18,11 +17,11 @@ const Layout = ({ location, title, children }) => {
           fontSize: '2rem'
         }}
       >
-        <GradientTitle
+        <GradientLink
           to={`/`}
         >
           {title}
-        </GradientTitle>
+        </GradientLink>
       </h1>
     )
   } else {
@@ -32,11 +31,11 @@ const Layout = ({ location, title, children }) => {
           marginTop: 0,
         }}
       >
-        <GradientTitle
+        <GradientLink
           to={`/`}
         >
           {title}
-        </GradientTitle>
+        </GradientLink>
       </h3>
     )
   }
@@ -45,7 +44,7 @@ const Layout = ({ location, title, children }) => {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
+        maxWidth: rhythm(30),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
@@ -62,12 +61,4 @@ const Layout = ({ location, title, children }) => {
   )
 }
 
-export default Layout
-
-const GradientTitle = styled(Link)`
-  box-shadow: none;     
-  background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
-  backgroundClip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
+export default Layout;

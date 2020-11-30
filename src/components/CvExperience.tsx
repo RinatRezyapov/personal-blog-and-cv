@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { OverlineText, Subtitle2, CaptionText, Body2, Subtitle3, gradientMixin } from "../styles/Typography";
+import { OverlineText, Subtitle2, Subtitle1, CaptionText, Body2, Subtitle3, gradientMixin } from "../styles/Typography";
 
 interface IUserExperienceItem {
   date: string;
@@ -26,7 +26,7 @@ const CvExperience: React.FunctionComponent<IProps> = ({ experience }) => (
             &nbsp;
             <Subtitle3 color="#a7a7a7">{v.date}</Subtitle3>
           </TitleDateContainer>
-          <GradientText>{v.position}</GradientText>
+          <GradientSubtitle1>{v.position}</GradientSubtitle1>
           {v.description.map((desc, idx) => <Body2 key={idx}>{desc}</Body2>)}
           <CaptionText>{v.location}</CaptionText>
         </ExperienceContainer>
@@ -49,11 +49,7 @@ const TitleDateContainer = styled.div`
   align-items: baseline;
 `;
 
-export const GradientText = styled.span`
-  font-family: Montserrat, sans-serif;
-  font-style: inherit;
-  font-size: 0.875rem;
-  line-height: 1.57;
+export const GradientSubtitle1 = styled(Subtitle1)`
   font-weight: 600;
   ${gradientMixin}
 `;

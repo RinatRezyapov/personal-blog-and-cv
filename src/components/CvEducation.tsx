@@ -28,7 +28,8 @@ const CvEduation: React.FunctionComponent<IProps> = ({ education }) => (
 
 export default CvEduation;
 
-export const DegreeText = styled(Subtitle2)`
+export const DegreeText = styled(Subtitle1)`
+  font-weight: 600;
   font-size: 0.75rem;
   ${gradientMixin}
 `;

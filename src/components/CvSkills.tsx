@@ -47,9 +47,9 @@ const SkillChip = styled.span`
   margin: 4px;
   padding: 1px;
   background-clip: content-box,border-box;
-  background-image: linear-gradient(#212528,#212528),linear-gradient(90deg,#333,#333);
+  background-image: linear-gradient(#191d1f,#191d1f),linear-gradient(90deg,#333,#333);
   &:hover {
-    background-image: linear-gradient(#212528,#212528),linear-gradient(90deg,#545454,#333);
+    background-image: linear-gradient(#191d1f,#191d1f),linear-gradient(90deg,#545454,#333);
   }
 `;
 
@@ -69,6 +69,7 @@ const SkillChipContent = styled.a`
   padding: 0 12px;
   box-shadow: none;
   -webkit-text-fill-color: white;
+  text-decoration: none;
 `;
 
 

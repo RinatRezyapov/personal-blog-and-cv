@@ -1,12 +1,12 @@
 // Gatsby supports TypeScript natively!
 import React from "react"
-import { PageProps, Link, graphql } from "gatsby"
+import { PageProps, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import styled from "styled-components"
+import { GradientLink } from "../styles/Typography"
 
 type Data = {
   site: {
@@ -49,9 +49,9 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <GradientTitle to={node.fields.slug}>
+                <GradientLink to={node.fields.slug}>
                   {title}
-                </GradientTitle>
+                </GradientLink>
               </h3>
               <small>{node.frontmatter.date}</small>
             </header>
@@ -95,11 +95,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-const GradientTitle = styled(Link)`
-  box-shadow: none;     
-  background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
-  backgroundClip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;

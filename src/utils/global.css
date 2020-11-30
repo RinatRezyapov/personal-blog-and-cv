@@ -1,13 +1,4 @@
-body {
-  background: #212528;
-  color:rgba(255, 255, 255, 0.88);
-  font: 100%/1.75 'Merriweather','Georgia',serif;
-}
-
-blockquote {
-  color: white;
-  border-left-color: white;
-} 
+@import "./typography.css";
 
 /**
  * Based on copypasta from Remy Bach and Sarah Drasner

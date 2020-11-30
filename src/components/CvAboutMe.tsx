@@ -13,10 +13,10 @@ interface IProps {
 const CvAboutMe: React.FunctionComponent<IProps> = ({ data }) => (
   <>
     <OverlineText>ABOUT ME</OverlineText>
-    <AboutMeText><i>{data}</i></AboutMeText>
+    <AboutMeText>{data}</AboutMeText>
     <Spacer mb={2} />
     <OverlineText>Location</OverlineText>
-    <Body1><i>I live in Ufa, Russian Federation</i></Body1>
+    <Body1>I live in Ufa, Russian Federation</Body1>
     <Spacer mb={1} />
     <LocationMap src={mapIcon} />
   </>
