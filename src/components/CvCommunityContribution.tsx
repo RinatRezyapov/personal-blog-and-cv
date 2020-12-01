@@ -34,6 +34,6 @@ const CvCommunityContribution: React.FunctionComponent<IProps> = ({ contribution
 export default CvCommunityContribution;
 
 export const ContributionText = styled(Subtitle1)`
-  font-weight: 600;
+  font-weight: 900;
   ${gradientMixin}
 `;

@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import { GradientLink } from "../styles/Typography"
+import styled from "styled-components"
 
 type Data = {
   site: {
@@ -42,11 +43,12 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug}>
+          <article key={node.fields.slug} style={{ marginBottom: rhythm(2) }}>
             <header>
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
+                  fontSize: '2rem'
                 }}
               >
                 <GradientLink to={node.fields.slug}>

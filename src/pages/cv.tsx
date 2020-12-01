@@ -159,7 +159,7 @@ const CurriculumVitae = () => {
       {
         date: '2006 - 2011',
         university: 'Ufa State Aviation Technical University',
-        degree: 'Banchelor of Science in Information Security'
+        degree: 'Bachelor of Science in Information Security'
       }
     ],
     languages: [

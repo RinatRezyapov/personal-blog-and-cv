@@ -50,6 +50,6 @@ const TitleDateContainer = styled.div`
 `;
 
 export const GradientSubtitle1 = styled(Subtitle1)`
-  font-weight: 600;
+  font-weight: 900;
   ${gradientMixin}
 `;

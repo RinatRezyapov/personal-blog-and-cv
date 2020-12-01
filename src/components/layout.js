@@ -14,7 +14,7 @@ const Layout = ({ location, title, children }) => {
           ...scale(1.5),
           marginBottom: rhythm(1.5),
           marginTop: 0,
-          fontSize: '2rem'
+          fontSize: '6rem'
         }}
       >
         <GradientLink
@@ -29,6 +29,9 @@ const Layout = ({ location, title, children }) => {
       <h3
         style={{
           marginTop: 0,
+          marginBottom: rhythm(2),
+          ...scale(1.5),
+          fontSize: '6rem'
         }}
       >
         <GradientLink
