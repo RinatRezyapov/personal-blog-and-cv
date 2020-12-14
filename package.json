@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "blog-is-undefined",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Personal blog by Rinat Rezyapov",
+  "version": "1.0.0",
+  "author": "Rinat Rezyapov <rinat.rezyapov@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/RinatRezyapov/personal-blog-and-cv/issues"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.1",
@@ -41,7 +41,7 @@
   "devDependencies": {
     "prettier": "2.0.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/RinatRezyapov/personal-blog-and-cv#readme",
   "keywords": [
     "gatsby"
   ],
@@ -49,7 +49,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/RinatRezyapov/personal-blog-and-cv.git"
   },
   "scripts": {
     "build": "gatsby build",

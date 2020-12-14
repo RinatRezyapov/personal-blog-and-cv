@@ -54,11 +54,11 @@ const Layout = ({ location, title, children }) => {
       <header>{header}</header>
       <main>{children}</main>
       <footer>
-        <a href={`https://github.com/RinatRezyapov`} target='_blank'>github</a>
+        <a href={`https://github.com/RinatRezyapov`} target='_blank' rel='noreferrer'>github</a>
             {' • '}
-        <a href={`https://www.linkedin.com/in/rinatrezyapov/`} target='_blank'>linkedin</a>
+        <a href={`https://www.linkedin.com/in/rinatrezyapov/`} target='_blank' rel='noreferrer'>linkedin</a>
             {' • '}
-        <a href={`https://twitter.com/RinatRezyapov`} target='_blank'>twitter</a>
+        <a href={`https://twitter.com/RinatRezyapov`} target='_blank' rel='noreferrer'>twitter</a>
       </footer>
     </div>
   )

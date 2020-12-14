@@ -3,10 +3,11 @@ module.exports = {
     title: `Blog is undefined`,
     author: {
       name: `Rinat Rezyapov`,
-      summary: ``
+      summary: `I'm a front-end developer who enjoys working with the latest technologies and
+      helping businesses to create scalable and performant web applications`
     },
-    description: ``,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `Personal blog by Rinat Rezyapov`,
+    siteUrl: `https://rrezyapov.com/`,
     social: {
       twitter: `RinatRezyapov`,
       github: 'RinatRezyapov',

@@ -43,7 +43,7 @@ const Bio = () => {
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata
   return (
     <div
       style={{
@@ -57,7 +57,8 @@ const Bio = () => {
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-          minWidth: 50,
+          minWidth: 100,
+          minHeight: 100,
           borderRadius: `100%`,
         }}
         imgStyle={IMAGE_STYLE}
@@ -67,10 +68,9 @@ const Bio = () => {
         <Link to={`/cv`}>
           {author.name}
         </Link>
-        <div>
+        <AboutSection>
           {author.summary}
-        </div>
-
+        </AboutSection>
       </HeadlineSection>
     </div>
   )
@@ -83,4 +83,10 @@ const HeadlineSection = styled.p`
   a {
     -webkit-text-fill-color: white;
   }
+`;
+
+const AboutSection = styled.p`
+  margin-top: 0.75rem;
+  color: rgb(255 255 255 / .7);
+  font-size: 0.9rem;
 `;

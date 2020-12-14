@@ -32,6 +32,7 @@ import amchartsIcon from '../../content/assets/amcharts-icon.svg'
 import nextjsIcon from '../../content/assets/nextjs-icon.svg'
 import backArrowIcon from '../../content/assets/back-arrow.svg'
 import styledComponentsIcon from '../../content/assets/styled-components-icon.svg'
+import PdfIcon from '../../content/assets/pdf.svg'
 import { Subtitle2, Title, gradientMixin } from "../styles/Typography";
 import CvExperience from "../components/CvExperience";
 import CvEducation from "../components/CvEducation";
@@ -41,6 +42,7 @@ import CvCommunityContribution from "../components/CvCommunityContribution";
 import CvSocial from "../components/CvSocial";
 import CvPersonal from "../components/CvPersonal";
 import CvAboutMe from "../components/CvAboutMe";
+import CvPdf from '../../static/rinat-rezyapov-cv.pdf';
 
 const IMAGE_COMPONENT_STYLE = {
   marginRight: -6,
@@ -67,14 +69,22 @@ const CurriculumVitae = () => {
         }
       }
     }
+    site {
+      siteMetadata {
+        author {
+          name
+          summary
+        }
+      }
+    }
   }
 `)
 
   const userData = {
-    name: 'Rinat',
-    lastName: 'Rezyapov',
+    name: data.site.siteMetadata.author.name.split(' ')[0],
+    lastName: data.site.siteMetadata.author.name.split(' ')[1],
     title: 'Front-end Developer',
-    aboutMe: `I enjoy working with the latest technologies in web development and helping businesses to create scalable and performant web applications`,
+    aboutMe: data.site.siteMetadata.author.summary,
     experience: [
       {
         date: 'May 2019 - Present',
@@ -178,6 +188,10 @@ const CurriculumVitae = () => {
     ]
   }
 
+  const onCvDownloadClick = () => {
+
+  }
+
   return (
     <Wrapper>
       <Link to={`/`}><BackIcon src={backArrowIcon} /></Link>
@@ -211,6 +225,12 @@ const CurriculumVitae = () => {
         <Spacer mb={2} />
         <CvCommunityContribution contributions={userData.contributions} />    
       </C2>
+      <Fab 
+        href={CvPdf}
+        download
+      >
+        <PdfSvgStyled src={PdfIcon} />
+      </Fab>
     </Wrapper>
   )
 }
@@ -266,4 +286,55 @@ const BackIcon = styled.img`
   &:hover {
     opacity: 100%;
   } 
+`;
+
+const Fab = styled.a`
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 64px;
+  height: 64px;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+  outline: 0;
+  &:before {
+    background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    content: "";
+    box-sizing: border-box;
+  }
+  &:after {
+    border-radius: 50%;
+    position: absolute;
+    top: .3rem;
+    bottom: .3rem;
+    left: .3rem;
+    right: .3rem;
+    background: #000;
+    -webkit-transition: opacity .25s;
+    transition: opacity .25s;
+    opacity: 0;
+    content: "";
+  }
+  &:hover:after {
+    opacity: 1;
+  }
+`;
+
+const PdfSvgStyled = styled.img`
+  position: relative;
+  z-index: 1;
+  width: 24px;
+  margin-bottom: 0;
 `;

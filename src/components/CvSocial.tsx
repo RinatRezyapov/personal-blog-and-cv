@@ -47,7 +47,7 @@ const BadgeWrapper = styled.div`
 
 const Badge = ({ src, iconHeight, href }) => (
   <BadgeWrapper>
-    <a href={href} target='_blank'><BadgeImg src={src} height={iconHeight} /></a>
+    <a href={href} target='_blank' rel='noreferrer'><BadgeImg src={src} height={iconHeight} /></a>
   </BadgeWrapper>
 )
 

@@ -76,7 +76,7 @@ const SkillChipContent = styled.a`
 const Chip = ({ icon, title, href, round = false }) => (
   <SkillChip>
     <SkillChipImg src={icon} round={round} />
-    <SkillChipContent href={href} target="_blank">
+    <SkillChipContent href={href} target="_blank" rel='noreferrer'>
       {title}
     </SkillChipContent>
   </SkillChip>

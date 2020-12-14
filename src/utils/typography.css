@@ -1,4 +1,5 @@
 @font-face {
   font-family: "Amazon Ember";
   src: url("AmazonEmber.ttf");
+  font-display: swap;
 }

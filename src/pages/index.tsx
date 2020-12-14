@@ -45,7 +45,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
         return (
           <article key={node.fields.slug} style={{ marginBottom: rhythm(2) }}>
             <header>
-              <h3
+              <h2
                 style={{
                   marginBottom: rhythm(1 / 4),
                   fontSize: '2rem'
@@ -54,7 +54,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                 <GradientLink to={node.fields.slug}>
                   {title}
                 </GradientLink>
-              </h3>
+              </h2>
               <small>{node.frontmatter.date}</small>
             </header>
             <section>
