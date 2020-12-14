@@ -321,7 +321,7 @@ const Fab = styled.a`
     bottom: .3rem;
     left: .3rem;
     right: .3rem;
-    background: #000;
+    background: #191d1f;
     -webkit-transition: opacity .25s;
     transition: opacity .25s;
     opacity: 0;
