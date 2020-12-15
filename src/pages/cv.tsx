@@ -43,6 +43,7 @@ import CvSocial from "../components/CvSocial";
 import CvPersonal from "../components/CvPersonal";
 import CvAboutMe from "../components/CvAboutMe";
 import CvPdf from '../../static/rinat-rezyapov-cv.pdf';
+import SEO from "../components/seo";
 
 const IMAGE_COMPONENT_STYLE = {
   marginRight: -6,
@@ -196,6 +197,7 @@ const CurriculumVitae = () => {
 
   return (
     <Wrapper>
+      <SEO title='Rinat Rezyapov CV' />
       <Link to={`/`}><BackIcon alt='back' src={backArrowIcon} /></Link>
       <C1>
         <Title>{`${userData.name} ${userData.lastName}`}</Title>
