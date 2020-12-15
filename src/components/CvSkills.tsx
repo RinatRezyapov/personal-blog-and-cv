@@ -61,7 +61,6 @@ const SkillChipImg = styled.img<ISkillChipImgProps>`
   height: 20px;
   margin: 0 -6px 0 6px;
   border-radius: ${({ round }) => round ? '50%' : 'none'}
-
 `;
 
 const SkillChipContent = styled.a` 
@@ -75,7 +74,7 @@ const SkillChipContent = styled.a`
 
 const Chip = ({ icon, title, href, round = false }) => (
   <SkillChip>
-    <SkillChipImg src={icon} round={round} />
+    <SkillChipImg alt={title} src={icon} round={round} />
     <SkillChipContent href={href} target="_blank" rel='noreferrer'>
       {title}
     </SkillChipContent>

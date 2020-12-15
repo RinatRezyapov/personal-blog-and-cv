@@ -18,7 +18,7 @@ const CvAboutMe: React.FunctionComponent<IProps> = ({ data }) => (
     <OverlineText>Location</OverlineText>
     <Body1>I live in Ufa, Russian Federation</Body1>
     <Spacer mb={1} />
-    <LocationMap src={mapIcon} />
+    <LocationMap alt='map' src={mapIcon} />
   </>
 )
 

@@ -46,7 +46,7 @@ const PersonalBadgeWrapper = styled.div`
 const PersonalBadge = ({ src, title = '', iconHeight }) => (
   <PersonalBadgeWrapper>
     {title}
-    <PersonalBadgeImg src={src} height={iconHeight} />
+    <PersonalBadgeImg alt={title} src={src} height={iconHeight} />
   </PersonalBadgeWrapper>
 )
 

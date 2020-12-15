@@ -49,6 +49,8 @@ const IMAGE_COMPONENT_STYLE = {
   marginLeft: 4,
   marginBottom: 0,
   borderRadius: `100%`,
+  minWidth: 150,
+  minHeight: 150,
 };
 
 const IMAGE_STYLE = {
@@ -194,7 +196,7 @@ const CurriculumVitae = () => {
 
   return (
     <Wrapper>
-      <Link to={`/`}><BackIcon src={backArrowIcon} /></Link>
+      <Link to={`/`}><BackIcon alt='back' src={backArrowIcon} /></Link>
       <C1>
         <Title>{`${userData.name} ${userData.lastName}`}</Title>
         <Spacer mb={0.5} />
@@ -229,7 +231,7 @@ const CurriculumVitae = () => {
         href={CvPdf}
         download
       >
-        <PdfSvgStyled src={PdfIcon} />
+        <PdfSvgStyled alt='download-pdf' src={PdfIcon} />
       </Fab>
     </Wrapper>
   )

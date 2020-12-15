@@ -63,15 +63,17 @@ const Bio = () => {
         }}
         imgStyle={IMAGE_STYLE}
       />
-      <HeadlineSection>
-        Personal blog by{' '}
-        <Link to={`/cv`}>
-          {author.name}
-        </Link>
+      <HeadlineWrapper>
+        <HeadlineSection>
+          Personal blog by{' '}
+          <Link to={`/cv`}>
+            {author.name}
+          </Link>
+        </HeadlineSection>
         <AboutSection>
           {author.summary}
         </AboutSection>
-      </HeadlineSection>
+      </HeadlineWrapper>
     </div>
   )
 }
@@ -86,7 +88,11 @@ const HeadlineSection = styled.p`
 `;
 
 const AboutSection = styled.p`
-  margin-top: 0.75rem;
   color: rgb(255 255 255 / .7);
   font-size: 0.9rem;
+`;
+
+const HeadlineWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
