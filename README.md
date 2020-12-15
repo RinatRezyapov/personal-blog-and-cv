@@ -1,4 +1,4 @@
-# [rinat-rezyapov.netlify.app](https://rinat-rezyapov.netlify.app/)
+# [rrezyapov.com](https://rrezyapov.com/)
 
 🚀 **Built with Gatsby**
 
