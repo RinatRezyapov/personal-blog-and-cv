@@ -1,12 +1,11 @@
 import React from "react";
+import styled from "styled-components";
 
 import theLordOfTheRingsIcon from '../../content/assets/the-lord-of-the-rings-icon.svg'
 import burtonIcon from '../../content/assets/burton-icon.svg'
 import theKillersIcon from '../../content/assets/the-killers-icon.svg'
 
 import { OverlineText } from "../styles/Typography";
-import { Spacer } from "../pages/cv";
-import styled from "styled-components";
 
 interface IProps { }
 

@@ -1,4 +1,6 @@
 import React from "react"
+import styled from "styled-components";
+
 import { rhythm, scale } from "../utils/typography"
 import { GradientLink } from "../styles/Typography"
 
@@ -53,15 +55,26 @@ const Layout = ({ location, title, children }) => {
     >
       <header>{header}</header>
       <main>{children}</main>
-      <footer>
-        <a href={`https://github.com/RinatRezyapov`} target='_blank' rel='noreferrer'>github</a>
-            {' • '}
-        <a href={`https://www.linkedin.com/in/rinatrezyapov/`} target='_blank' rel='noreferrer'>linkedin</a>
-            {' • '}
-        <a href={`https://twitter.com/RinatRezyapov`} target='_blank' rel='noreferrer'>twitter</a>
-      </footer>
+      <Footer>
+        <div>
+          <a href={`https://github.com/RinatRezyapov`} target='_blank' rel='noreferrer'>github</a>
+          {' • '}
+          <a href={`https://www.linkedin.com/in/rinatrezyapov/`} target='_blank' rel='noreferrer'>linkedin</a>
+          {' • '}
+          <a href={`https://twitter.com/RinatRezyapov`} target='_blank' rel='noreferrer'>twitter</a>
+        </div>
+        <div>
+          © {new Date().getFullYear()} Built with <a href={`https://www.gatsbyjs.com/`} target='_blank' rel='noreferrer'>Gatsby</a>
+        </div>
+      </Footer>
     </div>
   )
 }
 
 export default Layout;
+
+const Footer = styled.footer`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
