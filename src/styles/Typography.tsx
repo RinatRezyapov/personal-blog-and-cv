@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 interface ITypographyProps {
   color?: string;
 }

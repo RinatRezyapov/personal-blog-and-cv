@@ -202,7 +202,7 @@ const CurriculumVitae = () => {
       <C1>
         <Title>{`${userData.name} ${userData.lastName}`}</Title>
         <Spacer mb={0.5} />
-        <Subtitle2>{userData.title}</Subtitle2>
+        <FullWidthSubtitle2>{userData.title}</FullWidthSubtitle2>
         <Spacer mb={2} />
         <Image
           fixed={data.avatar.childImageSharp.fixed}
@@ -341,4 +341,9 @@ const PdfSvgStyled = styled.img`
   z-index: 1;
   width: 24px;
   margin-bottom: 0;
+`;
+
+const FullWidthSubtitle2 = styled(Subtitle2)`
+  width: 100%;
+  text-align: center;
 `;

@@ -1,49 +1,12 @@
-import React from "react"
+import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
-import { rhythm, scale } from "../utils/typography"
-import { GradientLink } from "../styles/Typography"
+import { rhythm } from "../utils/typography"
+import { gradientMixin } from "../styles/Typography"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ title, children }) => {
 
-  const rootPath = `${__PATH_PREFIX__}/`
-  let header
-
-  if (location.pathname === rootPath) {
-    header = (
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-          fontSize: '6rem'
-        }}
-      >
-        <GradientLink
-          to={`/`}
-        >
-          {title}
-        </GradientLink>
-      </h1>
-    )
-  } else {
-    header = (
-      <h3
-        style={{
-          marginTop: 0,
-          marginBottom: rhythm(2),
-          ...scale(1.5),
-          fontSize: '6rem'
-        }}
-      >
-        <GradientLink
-          to={`/`}
-        >
-          {title}
-        </GradientLink>
-      </h3>
-    )
-  }
   return (
     <div
       style={{
@@ -53,7 +16,13 @@ const Layout = ({ location, title, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <header>{header}</header>
+      <Header>
+        <Link to={`/`} style={{ textDecoration: 'none' }}>
+          <GradientH1>
+            {title}
+          </GradientH1>
+        </Link>
+      </Header>
       <main>{children}</main>
       <Footer>
         <div>
@@ -77,4 +46,16 @@ const Footer = styled.footer`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+`;
+
+const Header = styled.header`
+  margin-bottom: 2.175rem;
+  margin-top: 0;
+`;
+
+const GradientH1 = styled.h1`
+  ${gradientMixin};
+  display: inline;
+  font-size: 6rem;
+  line-height: 2rem;
 `;
