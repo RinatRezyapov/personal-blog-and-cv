@@ -10,10 +10,7 @@ export const Title = styled.h2<ITypographyProps>`
   font-weight: 900;
   line-height: 1.2;
   margin: 0 0 0.3rem 0;
-  background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 20px #ffffff99;
 `;
 
 export const Subtitle1 = styled.h4<ITypographyProps>`
@@ -78,23 +75,16 @@ export const CaptionText = styled.span<ICaptionTextProps>`
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.66;
-  color: #a7a7a7;
   margin-bottom: 0.3rem;
   display: ${({ inline }) => inline ? 'inline' : 'block'};
 `;
 
 export const GradientLink = styled(Link)`
   font-weight: 900;
-  box-shadow: none;     
-  background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
-  backgroundClip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  box-shadow: none;
+  text-decoration: none;
 `;
 
 export const gradientMixin = css`
-  background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
 `;

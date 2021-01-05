@@ -7,14 +7,14 @@ const typography = new Typography({
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
     body: {
       background: '#191d1f',
-      color: 'rgba(255, 255, 255, 0.88)',
+      color: 'rgba(255, 255, 255, 1)',
     },
     a: {
-      color: 'rgba(255, 255, 255, 0.88)',
+      color: 'rgba(255, 255, 255, 1)',
     },
     blockquote: {
-      color: 'rgba(255, 255, 255, 0.88)',
-      borderLeftColor: 'rgba(255, 255, 255, 0.88)',
+      color: 'rgba(255, 255, 255, 1)',
+      borderLeftColor: 'rgba(255, 255, 255, 1)',
     },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,

@@ -65,7 +65,7 @@ If the value is absent then `Option` container transforms into `None` - similar 
 If we need to access the value in an `Option` container we use `map` on this container, the same way you use `map` method on an array to access and transform values.
 
 
->**Note that `map` in this case is not JavaScript's array built-in method but special `map` that is imported from `fp-ts` library.**
+>**Note that `map` in this case is not JavaScript's array built-in method but special `map` that is usually implemented as a method of `Option`.**
 
 It's that simple. I'm not going to overwhelm you with Functional Programming theory in this article because you don't really need it to start to use  `Option` (at least in the beginning).
 

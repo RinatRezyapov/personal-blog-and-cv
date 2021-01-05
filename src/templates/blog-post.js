@@ -18,7 +18,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article>
-        <header>
+        <header style={{ marginBottom: rhythm(5) }}>
           <h1
             style={{
               marginTop: rhythm(1),

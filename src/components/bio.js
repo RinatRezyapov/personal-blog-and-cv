@@ -48,7 +48,7 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
+        marginBottom: rhythm(4),
       }}
     >
       <Image
@@ -88,7 +88,7 @@ const HeadlineSection = styled.p`
 `;
 
 const AboutSection = styled.p`
-  color: rgb(255 255 255 / .7);
+  color: white;
   font-size: 0.9rem;
 `;
 

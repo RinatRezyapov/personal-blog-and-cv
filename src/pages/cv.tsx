@@ -198,7 +198,6 @@ const CurriculumVitae = () => {
   return (
     <Wrapper>
       <SEO title='Rinat Rezyapov CV' />
-      <Link to={`/`}><BackIcon alt='back' src={backArrowIcon} /></Link>
       <C1>
         <Title>{`${userData.name} ${userData.lastName}`}</Title>
         <Spacer mb={0.5} />
@@ -218,23 +217,28 @@ const CurriculumVitae = () => {
         <CvSocial data={userData.social} />
       </C1>
       <C2>
-        <CvExperience experience={userData.experience} />   
+        <CvExperience experience={userData.experience} />
       </C2>
       <C2>
-       <CvSkills skills={userData.skills} /> 
-       <Spacer mb={2} />
+        <CvSkills skills={userData.skills} />
+        <Spacer mb={2} />
         <CvEducation education={userData.education} />
         <Spacer mb={2} />
         <CvLanguages languages={userData.languages} />
         <Spacer mb={2} />
-        <CvCommunityContribution contributions={userData.contributions} />    
+        <CvCommunityContribution contributions={userData.contributions} />
       </C2>
-      <Fab 
+      <Fab
         href={CvPdf}
         download
       >
-        <PdfSvgStyled alt='download-pdf' src={PdfIcon} />
+        <SvgStyled alt='download-cv-pdf' src={PdfIcon} />
       </Fab>
+      <Link to={`/`}>
+      <Fab style={{ left: 16 }}>
+        <SvgStyled alt='back' src={backArrowIcon} />
+      </Fab>
+      </Link>
     </Wrapper>
   )
 }
@@ -256,6 +260,8 @@ export const Spacer = styled.div<ISpacerProps>`
 `;
 
 const Wrapper = styled.div`
+  position: relative;
+  z-index: 1;
   width: 960px;
   margin: 0 auto;
   display: flex;
@@ -283,7 +289,7 @@ const BackIcon = styled.img`
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 15px;
+  left: 10px;
   top: 15px;
   opacity: 70%;
   cursor: pointer;
@@ -308,7 +314,7 @@ const Fab = styled.a`
   overflow: hidden;
   outline: 0;
   &:before {
-    background: linear-gradient(92.05deg, #BCA1F7 12.09%, #E577B4 42.58%, #FF7170 84.96%);
+    background: linear-gradient(130deg,#ff7a18,#af002d,#a960ee);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -336,7 +342,7 @@ const Fab = styled.a`
   }
 `;
 
-const PdfSvgStyled = styled.img`
+const SvgStyled = styled.img`
   position: relative;
   z-index: 1;
   width: 24px;

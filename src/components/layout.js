@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 import { rhythm } from "../utils/typography"
-import { gradientMixin } from "../styles/Typography"
 
 const Layout = ({ title, children }) => {
 
@@ -14,14 +13,14 @@ const Layout = ({ title, children }) => {
         marginRight: `auto`,
         maxWidth: rhythm(30),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        position: 'relative',
+        zIndex: 2,
       }}
     >
       <Header>
-        <Link to={`/`} style={{ textDecoration: 'none' }}>
-          <GradientH1>
-            {title}
-          </GradientH1>
-        </Link>
+        <CustomLink to={`/`}>
+          {title}
+        </CustomLink>
       </Header>
       <main>{children}</main>
       <Footer>
@@ -36,7 +35,7 @@ const Layout = ({ title, children }) => {
           © {new Date().getFullYear()} Built with <a href={`https://www.gatsbyjs.com/`} target='_blank' rel='noreferrer'>Gatsby</a>
         </div>
       </Footer>
-    </div>
+    </div >
   )
 }
 
@@ -49,13 +48,15 @@ const Footer = styled.footer`
 `;
 
 const Header = styled.header`
-  margin-bottom: 2.175rem;
+  margin-bottom: 1.175rem;
   margin-top: 0;
 `;
 
-const GradientH1 = styled.h1`
-  ${gradientMixin};
-  display: inline;
-  font-size: 6rem;
-  line-height: 2rem;
+
+const CustomLink = styled(Link)`
+  text-shadow: 1px 1px 20px #ffffff99;
+  text-decoration: none;
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
 `;
