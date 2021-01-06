@@ -10,7 +10,6 @@ export const Title = styled.h2<ITypographyProps>`
   font-weight: 900;
   line-height: 1.2;
   margin: 0 0 0.3rem 0;
-  text-shadow: 1px 1px 20px #ffffff99;
 `;
 
 export const Subtitle1 = styled.h4<ITypographyProps>`

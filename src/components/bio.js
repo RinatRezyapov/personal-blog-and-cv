@@ -45,12 +45,7 @@ const Bio = () => {
 
   const { author } = data.site.siteMetadata
   return (
-    <div
-      style={{
-        display: `flex`,
-        marginBottom: rhythm(4),
-      }}
-    >
+    <Wrapper>
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author.name}
@@ -74,12 +69,20 @@ const Bio = () => {
           {author.summary}
         </AboutSection>
       </HeadlineWrapper>
-    </div>
+    </Wrapper>
   )
 }
 
 
 export default Bio;
+
+const Wrapper = styled.div`
+  display: flex;
+  margin-bottom: 5rem;
+  @media (max-width: 1024px) {
+    margin-bottom: 2rem;
+  }
+`;
 
 const HeadlineSection = styled.p`
   a {
