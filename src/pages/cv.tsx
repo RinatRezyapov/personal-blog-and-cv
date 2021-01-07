@@ -205,7 +205,7 @@ const CurriculumVitae = () => {
         <Spacer mb={2} />
         <Image
           fixed={data.avatar.childImageSharp.fixed}
-          alt={'me'}
+          alt='me'
           style={IMAGE_COMPONENT_STYLE}
           imgStyle={IMAGE_STYLE}
         />

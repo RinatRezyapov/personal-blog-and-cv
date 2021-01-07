@@ -15,6 +15,7 @@ import { rhythm } from "../utils/typography"
 const IMAGE_STYLE = {
   marginBottom: 0,
   borderRadius: `50%`,
+  border: '2px solid white',
 };
 
 const Bio = () => {
