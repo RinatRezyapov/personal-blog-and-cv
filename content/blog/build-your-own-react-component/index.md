@@ -8,7 +8,12 @@ description: "We will try to build a simple version of popular UI library - Reac
 
 This is a second part of *Build your own React.js series*. Click [here](/build-your-own-react-render) if you didn't read the first part.
 
-## Implementing Component
+## Table Of Content
+* [Implementing Component](#implementing-component)
+* [Implementing DOMComponentWrapper](#implementing-domcomponentwrapper)
+* [DOM](#dom)
+
+## Implementing Component <a name="implementing-component"></a>
 
 In the previous article, we stopped at creating our first `App` class and passing it to `render` (`ReactDOM.render` in React.js) function. We figured out that in order to continue we need to implement `Component` class (`React.Component` in React.js) and extend `App` class from it.
 
@@ -179,9 +184,11 @@ Let's look at the results of calling `this.render` in the `Component` class impl
     const renderedComponent = instantiateComponent(renderedElement);
   }
 ```
-We've got what we declared in the `render` method of the App class component. Nice!
+We've got what we declared in the `render` method of the App class component. Nice! Then, we call `instantiateComponent` with this result.
 
-Next, we call `instantiateComponent` with this result. The current implementation of `instantiateComponent` expects `element.type` to be a class component. So we need to add support for DOM elements in the `element.type`, i.e. `div`, `a`. Pay attention that we use string ("div") to describe a DOM element and not actual HTML tag (div). 
+## Implementing DOMComponentWrapper <a name="implementing-domcomponentwrapper"></a>
+
+The current implementation of `instantiateComponent` expects `element.type` to be a class component. So we need to add support for DOM elements in the `element.type`, i.e. `div`, `a`. Pay attention that we use string ("div") to describe a DOM element and not actual HTML tag (div). 
 
 ```js
   // Component.js
@@ -336,6 +343,7 @@ Let's return to the `mount` function and add final steps.
     console.log(renderedNode) // <div>We are building React.js</div>
   }
 ```
+## DOM <a name="dom"></a>
 
 We know that `Reconciler.mountComponent(component, node)` returns a DOM element. We need to append it to the root node `<div id="root"></div>` in our HTML file so we could see it in the browser. For that let's create DOM tools. They are pretty easy. `[].slice.call(node.childNodes)` is just a way to create an array from `node.childNodes` because originally `node.childNodes` is not an array.
 
