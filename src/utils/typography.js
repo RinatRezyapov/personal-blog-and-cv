@@ -12,10 +12,6 @@ const typography = new Typography({
     a: {
       color: 'rgba(255, 255, 255, 1)',
     },
-    blockquote: {
-      color: 'rgba(255, 255, 255, 1)',
-      borderLeftColor: 'rgba(255, 255, 255, 1)',
-    },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
