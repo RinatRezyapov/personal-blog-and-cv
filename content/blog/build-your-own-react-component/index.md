@@ -1,6 +1,6 @@
 ---
 title: Build your own React.js - Part 2. React.Component
-date: "2021-01-22T20:00:00.000Z"
+date: "2021-01-23T20:00:00.000Z"
 description: "We will try to build a simple version of popular UI library - React.js. In this article we will implement React.Component class"
 ---
 
