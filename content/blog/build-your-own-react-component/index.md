@@ -379,7 +379,7 @@ This is a flowchart of what we've covered so far:
 
 Feel free to open it in the second tab/monitor and go through this article again.
 
-In this article, we were able to render only one child `{ children: We are building ${this.props.title} }` but in the real React.js application we usually have multiple child. In the next episode of the *Build your own React.js series* we will implement MultiChild class that will help us with that.
+In this article, we were able to render only one child `{ children: We are building ${this.props.title} }` but in the real React.js application we usually have multiple children. In the next episode of the *Build your own React.js series* we will implement MultiChild class that will help us with that.
 
 Links:
 1. <a href="https://github.com/RinatRezyapov/build-own-reactjs/tree/fb6da8f12fec130c9bfc332ee0976160bcd577ca" target="_blank" rel="noopener">Github repo with the source code from this article</a>
