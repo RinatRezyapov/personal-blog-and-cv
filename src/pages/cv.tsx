@@ -5,6 +5,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 
 import linkedinIcon from '../../content/assets/linkedin-icon.svg'
+import devtoIcon from '../../content/assets/devto.svg'
 import twitterIcon from '../../content/assets/twitter-icon.svg'
 import githubIcon from '../../content/assets/github-icon.svg'
 import jiraIcon from '../../content/assets/jira-icon.svg'
@@ -187,7 +188,8 @@ const CurriculumVitae = () => {
     social: [
       { src: githubIcon, iconHeight: 30, href: 'https://github.com/RinatRezyapov' },
       { src: twitterIcon, iconHeight: 30, href: 'https://twitter.com/RinatRezyapov' },
-      { src: linkedinIcon, iconHeight: 30, href: 'https://www.linkedin.com/in/rinatrezyapov' }
+      { src: linkedinIcon, iconHeight: 30, href: 'https://www.linkedin.com/in/rinatrezyapov' },
+      { src: devtoIcon, iconHeight: 30, href: 'https://dev.to/rinatrezyapov' }
     ]
   }
 

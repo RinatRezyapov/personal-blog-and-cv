@@ -8,6 +8,8 @@ description: "We will try to build a simple version of popular UI library - Reac
 
 This is a second part of *Build your own React.js series*. Click [here](/build-your-own-react-render) if you didn't read the first part.
 
+><a href="https://dev.to/rinatrezyapov/build-your-own-react-js-part-2-react-component-350h" target="_blank" rel="noopener">This article is also posted on dev.to</a>
+
 ## Table Of Content
 * [Implementing Component](#implementing-component)
 * [Implementing DOMComponentWrapper](#implementing-domcomponentwrapper)

@@ -31,6 +31,8 @@ Because I think you need to know "how it started" to understand "how it's going"
  
 Let's go!
 
+><a href="https://dev.to/rinatrezyapov/build-your-own-react-js-part-1-reactdom-render-5560" target="_blank" rel="noopener">This article is also posted on dev.to</a>
+
 ## How it starts
 
 Let's start with refreshing our memory about how elements are described in React.js without using `jsx`.
