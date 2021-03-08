@@ -7,16 +7,7 @@ import { rhythm } from "../utils/typography"
 const Layout = ({ title, children }) => {
 
   return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(30),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        position: 'relative',
-        zIndex: 2,
-      }}
-    >
+    <Wrapper>
       <Header>
         <CustomLink to={`/`}>
           {title}
@@ -35,7 +26,7 @@ const Layout = ({ title, children }) => {
           © {new Date().getFullYear()} Built with <a href={`https://www.gatsbyjs.com/`} target='_blank' rel='noreferrer'>Gatsby</a>
         </div>
       </Footer>
-    </div >
+    </Wrapper>
   )
 }
 
@@ -50,8 +41,8 @@ const Footer = styled.footer`
 const Header = styled.header`
   margin-bottom: 1.175rem;
   margin-top: 0;
+  text-shadow: 0 2px 2px rgb(0 0 0 / 50%);
 `;
-
 
 const CustomLink = styled(Link)`
   text-decoration: none;
@@ -61,4 +52,13 @@ const CustomLink = styled(Link)`
   @media (max-width: 1024px) {
     font-size: 3.75rem;
   }
+`;
+
+const Wrapper = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${rhythm(30)};
+  padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
+  position: relative;
+  z-index: 2;
 `;

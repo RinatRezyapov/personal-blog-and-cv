@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import styled from 'styled-components';
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -18,46 +19,23 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article>
-        <header style={{ marginBottom: rhythm(5) }}>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
+        <Header>
+          <Title>
             {post.frontmatter.title}
-          </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
+          </Title>
+          <Body>
             {post.frontmatter.date}
-          </p>
-        </header>
+          </Body>
+        </Header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <Divider />
         <footer>
           <Bio />
         </footer>
       </article>
 
       <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
+        <List>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
@@ -72,7 +50,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               </Link>
             )}
           </li>
-        </ul>
+        </List>
       </nav>
     </Layout>
   )
@@ -99,3 +77,28 @@ export const pageQuery = graphql`
     }
   }
 `
+const Header = styled.header`
+  margin-bottom: ${rhythm(5)};
+`;
+
+const Title = styled.h1`
+  margin-top: ${rhythm(1)};
+  margin-bottom: 0;
+`;
+
+const Body = styled.p`
+  display: block;
+  margin-bottom: ${rhythm(1)};
+`;
+
+const Divider = styled.hr`
+  margin-botton: ${rhythm(1)};
+`;
+
+const List = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+`;

@@ -10,6 +10,7 @@ export const Title = styled.h2<ITypographyProps>`
   font-weight: 900;
   line-height: 1.2;
   margin: 0 0 0.3rem 0;
+  text-shadow: 0 2px 2px rgb(0 0 0 / 50%);
 `;
 
 export const Subtitle1 = styled.h4<ITypographyProps>`
@@ -78,7 +79,7 @@ export const CaptionText = styled.span<ICaptionTextProps>`
   display: ${({ inline }) => inline ? 'inline' : 'block'};
 `;
 
-export const GradientLink = styled(Link)`
+export const StyledLink = styled(Link)`
   font-weight: 900;
   box-shadow: none;
   text-decoration: none;

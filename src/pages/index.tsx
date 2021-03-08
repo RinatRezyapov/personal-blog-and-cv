@@ -1,18 +1,20 @@
-// Gatsby supports TypeScript natively!
-import React from "react"
-import { PageProps, graphql } from "gatsby"
+import React from "react";
+import { PageProps, graphql } from "gatsby";
+import styled from "styled-components";
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
-import { GradientLink } from "../styles/Typography"
-import styled from "styled-components"
+import Bio from "../components/bio";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { rhythm } from "../utils/typography";
+import { StyledLink } from "../styles/Typography";
 
 type Data = {
   site: {
     siteMetadata: {
       title: string
+      author: {
+        name: string
+      }
     }
   }
   allMarkdownRemark: {
@@ -38,23 +40,18 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Rinat Rezyapov" />
+      <SEO title={data.site.siteMetadata.author.name} />
       <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
-          <article key={node.fields.slug} style={{ marginBottom: rhythm(2) }}>
+          <StyledArticle key={node.fields.slug} >
             <header>
-              <h2
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                  fontSize: '2rem'
-                }}
-              >
-                <GradientLink to={node.fields.slug}>
+              <TitleWrapper>
+                <StyledLink to={node.fields.slug}>
                   {title}
-                </GradientLink>
-              </h2>
+                </StyledLink>
+              </TitleWrapper>
               <small>{node.frontmatter.date}</small>
             </header>
             <section>
@@ -64,7 +61,7 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
                 }}
               />
             </section>
-          </article>
+          </StyledArticle>
         )
       })}
     </Layout>
@@ -78,6 +75,9 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author {
+          name
+        }
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -97,3 +97,12 @@ export const pageQuery = graphql`
     }
   }
 `
+
+const TitleWrapper = styled.h2`
+  margin-bottom: ${rhythm(1 / 4)};
+  font-size: 2rem;
+`;
+
+const StyledArticle = styled.article`
+  margin-bottom: ${rhythm(2)};
+`;

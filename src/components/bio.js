@@ -47,16 +47,9 @@ const Bio = () => {
   const { author } = data.site.siteMetadata
   return (
     <Wrapper>
-      <Image
+      <BioImage
         fixed={data.avatar.childImageSharp.fixed}
         alt={author.name}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 100,
-          minHeight: 100,
-          borderRadius: `100%`,
-        }}
         imgStyle={IMAGE_STYLE}
       />
       <HeadlineWrapper>
@@ -99,4 +92,12 @@ const AboutSection = styled.p`
 const HeadlineWrapper = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const BioImage = styled(Image)`
+  margin-right: ${rhythm(1 / 2)};
+  margin-bottom: 0;
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 100%;
 `;

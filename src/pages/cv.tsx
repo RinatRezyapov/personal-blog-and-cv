@@ -142,7 +142,6 @@ const CurriculumVitae = () => {
       {
         title: 'Frameworks',
         data: [
-          { iconSrc: reactIcon, title: 'react-native', href: "https://reactnative.dev/" },
           { iconSrc: nextjsIcon, title: 'nextjs', href: "https://nextjs.org/" },
           { iconSrc: gatsbyIcon, title: 'gatsby', href: "https://www.gatsbyjs.com/" },
         ]
@@ -237,9 +236,9 @@ const CurriculumVitae = () => {
         <SvgStyled alt='download-cv-pdf' src={PdfIcon} />
       </Fab>
       <Link to={`/`}>
-      <Fab style={{ left: 16 }}>
+      <BackFab>
         <SvgStyled alt='back' src={backArrowIcon} />
-      </Fab>
+      </BackFab>
       </Link>
     </Wrapper>
   )
@@ -342,6 +341,10 @@ const Fab = styled.a`
   &:hover:after {
     opacity: 1;
   }
+`;
+
+const BackFab = styled(Fab)`
+  left: 16px;
 `;
 
 const SvgStyled = styled.img`
