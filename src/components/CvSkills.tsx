@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { OverlineText, Subtitle2, CaptionText, Subtitle1, Subtitle3 } from "../styles/Typography";
 import { Spacer } from "../pages/cv";
+import { colors } from "../utils/typography";
 
 interface ISkillData {
   iconSrc: any;
@@ -46,10 +47,10 @@ const SkillChip = styled.span`
   height: 32px;
   margin: 4px;
   padding: 1px;
-  background-clip: content-box,border-box;
-  background-image: linear-gradient(#191d1f,#191d1f),linear-gradient(90deg,#333,#333);
+  transition: background-color 500ms;
+  background-color: ${colors.backgroundColor};
   &:hover {
-    background-image: linear-gradient(#191d1f,#191d1f),linear-gradient(90deg,#545454,#333);
+    background-color: ${colors.backgroundColor};
   }
 `;
 

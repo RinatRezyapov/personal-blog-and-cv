@@ -1,12 +1,16 @@
 import Typography from "typography"
 import './global.css';
 
+export const colors = {
+  backgroundColor: '#282c35',
+}
+
 const typography = new Typography({
   headerFontFamily: ['Montserrat', 'sans-serif'],
   bodyFontFamily: ['Amazon Ember', 'Montserrat', 'sans-serif'],
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
     body: {
-      background: '#191d1f',
+      background: colors.backgroundColor,
       color: 'rgba(255, 255, 255, 1)',
     },
     a: {

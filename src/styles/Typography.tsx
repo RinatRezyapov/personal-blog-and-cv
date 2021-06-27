@@ -80,7 +80,8 @@ export const CaptionText = styled.span<ICaptionTextProps>`
 `;
 
 export const StyledLink = styled(Link)`
-  font-weight: 900;
+  font-size: 22px;
+  font-weight: 800;
   box-shadow: none;
   text-decoration: none;
 `;

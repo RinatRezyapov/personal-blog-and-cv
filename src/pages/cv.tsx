@@ -45,6 +45,7 @@ import CvPersonal from "../components/CvPersonal";
 import CvAboutMe from "../components/CvAboutMe";
 import CvPdf from '../../static/rinat-rezyapov-cv.pdf';
 import SEO from "../components/seo";
+import { colors } from '../utils/typography';
 
 const IMAGE_COMPONENT_STYLE = {
   marginRight: -6,
@@ -315,7 +316,7 @@ const Fab = styled.a`
   overflow: hidden;
   outline: 0;
   &:before {
-    background: linear-gradient(130deg,#ff7a18,#af002d,#a960ee);
+    background: linear-gradient(130deg, #e91e63 30%, #00bcd4 80%);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -332,7 +333,7 @@ const Fab = styled.a`
     bottom: .3rem;
     left: .3rem;
     right: .3rem;
-    background: #191d1f;
+    background: ${colors.backgroundColor};
     -webkit-transition: opacity .25s;
     transition: opacity .25s;
     opacity: 0;
