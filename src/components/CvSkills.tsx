@@ -47,10 +47,10 @@ const SkillChip = styled.span`
   height: 32px;
   margin: 4px;
   padding: 1px;
-  transition: background-color 500ms;
+  box-shadow: rgb(0 0 0 / 50%) 0px 1px 2px;
   background-color: ${colors.backgroundColor};
   &:hover {
-    background-color: ${colors.backgroundColor};
+    box-shadow: rgb(0 0 0 / 50%) 0px 0px 1px;
   }
 `;
 
