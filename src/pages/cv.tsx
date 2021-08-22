@@ -316,7 +316,7 @@ const Fab = styled.a`
   overflow: hidden;
   outline: 0;
   &:before {
-    background: linear-gradient(130deg, #e91e63 30%, #00bcd4 80%);
+    background: linear-gradient(333deg,#03a9f4 20%,#e91e63 40%, #ffeb3b 80%);
     position: absolute;
     top: 0;
     bottom: 0;
