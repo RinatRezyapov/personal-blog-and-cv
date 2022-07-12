@@ -85,6 +85,8 @@ const CurriculumVitae = () => {
   }
 `)
 
+
+
   const userData = {
     name: data.site.siteMetadata.author.name.split(' ')[0],
     lastName: data.site.siteMetadata.author.name.split(' ')[1],
@@ -95,7 +97,14 @@ const CurriculumVitae = () => {
         date: 'May 2019 - Present',
         company: { link: '', title: 'InCountry' },
         position: 'Senior Front-end Developer',
-        description: ['Working on the main Portal product and other internal web applications at San Francisco based startup - InCountry;', 'In my role as a senior front-end developer I introduced React Hooks API, TypeScript and Next.js to the existing Portal application;', `In addition to web development I'm acting as a Team Lead for small team of front-end developers and designers;`, `The duties  of this role includes requirements gathering, interaction with product  owner, short and mid-range project planning and estimation, daily  prioritization of work tasks for team members, reviewing and approving designs and preparing releases for deployment;`],
+        description: [
+          'InCountry is a “data residency-as-a-service” platform that helps international companies store customer data locally;',
+          'Working on the Portal web application product and other internal web applications at San Francisco-based startup - InCountry;',
+          'Performed a total UI/UX redesign of the existing Portal application with the introduction of TypeScript, Next.js (SSR), and React Hooks;',
+          'As part of the UI/UX redesign project acted as a Team Lead for the team of two front-end developers and one UI/UX designer. The duties also include team members mentoring, code review, requirements gathering, interaction with product owner, short and mid-range project planning, reviewing, and approving designs and preparing releases for deployment;',
+          'Collaborated with back-end developers to introduce Oauth2 protocol. Planned moving the Portal product from JWT tokens-based authentication to cookies-based authentication. Collaborated with back-end developers to introduce AWS Cognito with SAML authentication. Improved security of web application by ensuring that it is compliant to secure web coding practices (OWASP);',
+          'Worked on improving application performance, decreasing the bundle size, introducing server-side rendering, and implementing new features such as administration console, usage dashboard, billing, and data residency recommendations module;'
+        ],
         location: 'San Francisco, California (Remote)'
       },
       {
@@ -183,7 +192,8 @@ const CurriculumVitae = () => {
     contributions: [
       { date: '2020', link: 'https://github.com/gatsbyjs/gatsby-ru/pull/39', project: 'Gatsby Official Tutorial', description: 'Contributed into translation of official tutorial into Russian' },
       { date: '2019', link: 'https://github.com/reactjs/ru.reactjs.org/pull/98', project: 'Reactjs Official Documentation', description: 'Contributed into translation of official documentation into Russian' },
-      { date: '2018', link: 'https://github.com/RinatRezyapov/Vault-13', project: 'Fallout 2 game in JavaScript', description: 'Created a video tutorial about how to recreate Fallout 2 in JavaScript' }
+      { date: '2018', link: 'https://github.com/RinatRezyapov/Vault-13', project: 'Fallout 2 game in JavaScript', description: 'Created a video tutorial about how to recreate Fallout 2 in JavaScript' },
+      { date: '2021', link: 'https://dev.to/rinatrezyapov', project: 'Build your own React.js', description: 'Series of articles on how to build own React.js library' }
     ],
     social: [
       { src: githubIcon, iconHeight: 30, href: 'https://github.com/RinatRezyapov' },
