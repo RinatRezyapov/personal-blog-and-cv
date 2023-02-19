@@ -15,7 +15,7 @@ import { rhythm } from "../utils/typography"
 const IMAGE_STYLE = {
   marginBottom: 0,
   borderRadius: `50%`,
-  border: '2px solid white',
+  border: '4px solid #7b2da1'
 };
 
 const Bio = () => {
@@ -72,20 +72,19 @@ export default Bio;
 
 const Wrapper = styled.div`
   display: flex;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   @media (max-width: 1024px) {
     margin-bottom: 2rem;
   }
 `;
 
-const HeadlineSection = styled.p`
+const HeadlineSection = styled.span`
   a {
-    -webkit-text-fill-color: white;
+    color: #7b2da1;
   }
 `;
 
 const AboutSection = styled.p`
-  color: white;
   font-size: 0.9rem;
 `;
 
@@ -97,7 +96,7 @@ const HeadlineWrapper = styled.div`
 const BioImage = styled(Image)`
   margin-right: ${rhythm(1 / 2)};
   margin-bottom: 0;
-  min-width: 100px;
-  min-height: 100px;
+  min-width: 150px;
+  min-height: 150px;
   border-radius: 100%;
 `;

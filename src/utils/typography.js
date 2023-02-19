@@ -2,7 +2,7 @@ import Typography from "typography"
 import './global.css';
 
 export const colors = {
-  backgroundColor: '#282c35',
+  backgroundColor: '#fff',
 }
 
 const typography = new Typography({
@@ -11,10 +11,10 @@ const typography = new Typography({
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
     body: {
       background: colors.backgroundColor,
-      color: 'rgba(255, 255, 255, 1)',
+      color: '#282c35',
     },
     a: {
-      color: 'rgba(255, 255, 255, 1)',
+      color: '#282c35',
     },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,

@@ -78,12 +78,11 @@ export const pageQuery = graphql`
   }
 `
 const Header = styled.header`
-  margin-bottom: ${rhythm(5)};
+  margin-bottom: ${rhythm(2)};
 `;
 
 const Title = styled.h1`
-  margin-top: ${rhythm(1)};
-  margin-bottom: 0;
+  margin-top: ${rhythm(1)} 0 ${rhythm(1)} 0;
 `;
 
 const Body = styled.p`

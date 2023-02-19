@@ -41,10 +41,10 @@ const Footer = styled.footer`
 const Header = styled.header`
   margin-bottom: 1.175rem;
   margin-top: 0;
-  text-shadow: 0 2px 2px rgb(0 0 0 / 50%);
 `;
 
 const CustomLink = styled(Link)`
+  color: #7b2da1;
   text-decoration: none;
   font-size: 4rem;
   font-family: 'Montserrat', sans-serif;

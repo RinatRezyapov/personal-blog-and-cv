@@ -33,7 +33,7 @@ import amchartsIcon from '../../content/assets/amcharts-icon.svg'
 import nextjsIcon from '../../content/assets/nextjs-icon.svg'
 import backArrowIcon from '../../content/assets/back-arrow.svg'
 import styledComponentsIcon from '../../content/assets/styled-components-icon.svg'
-import PdfIcon from '../../content/assets/pdf.svg'
+import CVIcon from '../../content/assets/cv-svg.svg'
 import { Subtitle2, Title, gradientMixin } from "../styles/Typography";
 import CvExperience from "../components/CvExperience";
 import CvEducation from "../components/CvEducation";
@@ -59,7 +59,7 @@ const IMAGE_COMPONENT_STYLE = {
 const IMAGE_STYLE = {
   marginBottom: 0,
   borderRadius: `50%`,
-  border: '2px solid white'
+  border: '4px solid #7b2da1'
 };
 
 const CurriculumVitae = () => {
@@ -231,7 +231,7 @@ const CurriculumVitae = () => {
       <C2>
         <CvExperience experience={userData.experience} />
       </C2>
-      <C2>
+      <C3>
         <CvSkills skills={userData.skills} />
         <Spacer mb={2} />
         <CvEducation education={userData.education} />
@@ -239,12 +239,12 @@ const CurriculumVitae = () => {
         <CvLanguages languages={userData.languages} />
         <Spacer mb={2} />
         <CvCommunityContribution contributions={userData.contributions} />
-      </C2>
+      </C3>
       <Fab
         href={CvPdf}
         download
       >
-        <SvgStyled alt='download-cv-pdf' src={PdfIcon} />
+        <SvgStyled alt='download-cv-pdf' src={CVIcon} />
       </Fab>
       <Link to={`/`}>
       <BackFab>
@@ -293,24 +293,16 @@ const C1 = styled.div`
 `;
 
 const C2 = styled.div`
-  flex: 1;
+  flex: 1.5;
   padding: 1rem;
 `;
 
-const BackIcon = styled.img`
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 10px;
-  top: 15px;
-  opacity: 70%;
-  cursor: pointer;
-  &:hover {
-    opacity: 100%;
-  } 
+const C3 = styled.div`
+  flex: 1.1;
+  padding: 1rem;
 `;
 
-const Fab = styled.a`
+export const Fab = styled.a`
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -320,13 +312,12 @@ const Fab = styled.a`
   bottom: 16px;
   width: 64px;
   height: 64px;
-  color: white;
   text-align: center;
   border-radius: 50%;
   overflow: hidden;
   outline: 0;
   &:before {
-    background: linear-gradient(333deg,#03a9f4 20%,#e91e63 40%, #ffeb3b 80%);
+    background: #7b2da1;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -349,16 +340,13 @@ const Fab = styled.a`
     opacity: 0;
     content: "";
   }
-  &:hover:after {
-    opacity: 1;
-  }
 `;
 
 const BackFab = styled(Fab)`
   left: 16px;
 `;
 
-const SvgStyled = styled.img`
+export const SvgStyled = styled.img`
   position: relative;
   z-index: 1;
   width: 24px;

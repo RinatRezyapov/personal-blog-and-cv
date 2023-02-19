@@ -7,6 +7,9 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { rhythm } from "../utils/typography";
 import { StyledLink } from "../styles/Typography";
+import { Fab, SvgStyled } from "./cv";
+import CvPdf from '../../static/rinat-rezyapov-cv.pdf';
+import CVIcon from '../../content/assets/cv-svg.svg'
 
 type Data = {
   site: {
@@ -64,6 +67,12 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
           </StyledArticle>
         )
       })}
+      <Fab
+        href={CvPdf}
+        download
+      >
+        <SvgStyled alt='download-cv-pdf' src={CVIcon} />
+      </Fab>
     </Layout>
   )
 }

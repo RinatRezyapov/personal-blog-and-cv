@@ -8,7 +8,7 @@ import { colors } from "../utils/typography";
 interface ISkillData {
   iconSrc: any;
   title: string;
-  round?: boolean; 
+  round?: boolean;
   href: string;
 }
 
@@ -47,10 +47,10 @@ const SkillChip = styled.span`
   height: 32px;
   margin: 4px;
   padding: 1px;
-  box-shadow: rgb(0 0 0 / 50%) 0px 1px 2px;
+  border: 1px solid #282c35;
   background-color: ${colors.backgroundColor};
   &:hover {
-    box-shadow: rgb(0 0 0 / 50%) 0px 0px 1px;
+    border: 1px solid #7b2da1;
   }
 `;
 
@@ -68,7 +68,6 @@ const SkillChipContent = styled.a`
   font-size: 0.7rem;
   padding: 0 12px;
   box-shadow: none;
-  -webkit-text-fill-color: white;
   text-decoration: none;
 `;
 

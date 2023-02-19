@@ -3,7 +3,7 @@ module.exports = {
     title: `Blog is undefined`,
     author: {
       name: `Rinat Rezyapov`,
-      summary: `I'm a front-end developer who enjoys working with the latest technologies and
+      summary: `Front-end developer who enjoys working with the latest technologies and
       helping businesses to create scalable and performant web applications`
     },
     description: `Personal blog by Rinat Rezyapov`,
@@ -70,7 +70,7 @@ module.exports = {
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: '#282c35',
+        // theme_color: '#282c35',
         display: `minimal-ui`,
         icon: `content/assets/icon.png`
       }

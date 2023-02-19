@@ -5,19 +5,18 @@ interface ITypographyProps {
 }
 
 export const Title = styled.h2<ITypographyProps>`
-  color: ${({ color }) => color || 'inherit'};
+  color: ${({ color }) => color || '#7b2da1'};
   font-size: 1.75rem;
   font-weight: 900;
   line-height: 1.2;
   margin: 0 0 0.3rem 0;
-  text-shadow: 0 2px 2px rgb(0 0 0 / 50%);
 `;
 
 export const Subtitle1 = styled.h4<ITypographyProps>`
   font-style: inherit;
   line-height: 1.57;
   font-weight: 900;
-  color: ${({ color }) => color || 'inherit'};
+  color: ${({ color }) => color || '#7b2da1'};
   margin: 0 0 0.3rem 0;
 `;
 
@@ -27,7 +26,7 @@ export const Subtitle2 = styled.h5<ITypographyProps>`
   font-size: 0.875rem;
   line-height: 1.57;
   font-weight: 600;
-  color: ${({ color }) => color || 'inherit'};
+  color: ${({ color }) => color || '#7b2da1'};
   margin: 0 0 0.3rem 0;
 `;
 
@@ -36,7 +35,7 @@ export const Subtitle3 = styled.h6<ITypographyProps>`
   font-size: 0.75rem;
   line-height: 1.35;
   font-weight: 400;
-  color: ${({ color }) => color || 'inherit'};
+  color: ${({ color }) => color || '#7b2da1'};
   margin: 0 0 0.3rem 0;
 `;
 
@@ -80,7 +79,8 @@ export const CaptionText = styled.span<ICaptionTextProps>`
 `;
 
 export const StyledLink = styled(Link)`
-  font-size: 22px;
+  font-size: 1.75rem;
+  color: #7b2da1;
   font-weight: 800;
   box-shadow: none;
   text-decoration: none;
