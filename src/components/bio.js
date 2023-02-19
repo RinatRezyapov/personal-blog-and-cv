@@ -88,11 +88,3 @@ const HeadlineWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
-const BioImage = styled(Image)`
-  margin-right: ${rhythm(1 / 2)};
-  margin-bottom: 0;
-  min-width: 150px;
-  min-height: 150px;
-  border-radius: 100%;
-`;
