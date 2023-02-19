@@ -7,13 +7,12 @@
 
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
 import styled from "styled-components";
+import { StaticImage } from "gatsby-plugin-image"
 
 import { rhythm } from "../utils/typography"
 
 const IMAGE_STYLE = {
-  marginBottom: 0,
   borderRadius: `50%`,
   border: '4px solid #7b2da1'
 };
@@ -21,13 +20,6 @@ const IMAGE_STYLE = {
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
-        childImageSharp {
-          fixed(width: 90, height: 90) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
           author {
@@ -47,16 +39,18 @@ const Bio = () => {
   const { author } = data.site.siteMetadata
   return (
     <Wrapper>
-      <BioImage
-        fixed={data.avatar.childImageSharp.fixed}
+      <StaticImage
         alt={author.name}
         imgStyle={IMAGE_STYLE}
+        src="../../content/assets/profile-pic.png"
+        width={400}
+        height={400}
       />
       <HeadlineWrapper>
         <HeadlineSection>
           Personal blog by{' '}
           <Link to={`/cv`}>
-            {author.name}
+            {author.name} {'(CV)'}
           </Link>
         </HeadlineSection>
         <AboutSection>
@@ -72,8 +66,10 @@ export default Bio;
 
 const Wrapper = styled.div`
   display: flex;
+  gap: 16px;
   margin-bottom: 3rem;
   @media (max-width: 1024px) {
+    flex-direction: column;
     margin-bottom: 2rem;
   }
 `;

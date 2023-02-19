@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "gatsby-image"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 
@@ -46,18 +45,9 @@ import CvAboutMe from "../components/CvAboutMe";
 import CvPdf from '../../static/rinat-rezyapov-cv.pdf';
 import SEO from "../components/seo";
 import { colors } from '../utils/typography';
-
-const IMAGE_COMPONENT_STYLE = {
-  marginRight: -6,
-  marginLeft: 4,
-  marginBottom: 0,
-  borderRadius: `100%`,
-  minWidth: 150,
-  minHeight: 150,
-};
+import { StaticImage } from "gatsby-plugin-image"
 
 const IMAGE_STYLE = {
-  marginBottom: 0,
   borderRadius: `50%`,
   border: '4px solid #7b2da1'
 };
@@ -67,13 +57,6 @@ const CurriculumVitae = () => {
 
   const data = useStaticQuery(graphql`
   query CvQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.png/" }) {
-      childImageSharp {
-        fixed(width: 150, height: 150) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     site {
       siteMetadata {
         author {
@@ -215,11 +198,12 @@ const CurriculumVitae = () => {
         <Spacer mb={0.5} />
         <FullWidthSubtitle2>{userData.title}</FullWidthSubtitle2>
         <Spacer mb={2} />
-        <Image
-          fixed={data.avatar.childImageSharp.fixed}
-          alt='me'
-          style={IMAGE_COMPONENT_STYLE}
+        <StaticImage
+          alt={userData.name}
           imgStyle={IMAGE_STYLE}
+          src="../../content/assets/profile-pic.png"
+          width={300}
+          height={300}
         />
         <Spacer mb={2} />
         <CvAboutMe data={userData.aboutMe} />
@@ -247,9 +231,9 @@ const CurriculumVitae = () => {
         <SvgStyled alt='download-cv-pdf' src={CVIcon} />
       </Fab>
       <Link to={`/`}>
-      <BackFab>
-        <SvgStyled alt='back' src={backArrowIcon} />
-      </BackFab>
+        <BackFab>
+          <SvgStyled alt='back' src={backArrowIcon} />
+        </BackFab>
       </Link>
     </Wrapper>
   )

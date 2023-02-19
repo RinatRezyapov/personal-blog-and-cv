@@ -46,7 +46,7 @@ const Header = styled.header`
 const CustomLink = styled(Link)`
   color: #7b2da1;
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   @media (max-width: 1024px) {

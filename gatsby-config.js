@@ -52,8 +52,9 @@ module.exports = {
         ]
       }
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -62,15 +63,14 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Rinat Rezyapov Personal Blog`,
-        short_name: `GatsbyJS`,
+        short_name: `Rinat Rezyapov`,
         start_url: `/`,
         background_color: `#ffffff`,
-        // theme_color: '#282c35',
+        theme_color: '#7b2da1',
         display: `minimal-ui`,
         icon: `content/assets/icon.png`
       }
