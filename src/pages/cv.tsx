@@ -46,6 +46,7 @@ import CvAboutMe from "../components/CvAboutMe";
 import CvPdf from '../../static/rinat-rezyapov-cv.pdf';
 import SEO from "../components/seo";
 import { colors } from '../utils/typography';
+import { StaticImage } from "gatsby-plugin-image";
 
 const IMAGE_COMPONENT_STYLE = {
   marginRight: -6,
@@ -215,12 +216,15 @@ const CurriculumVitae = () => {
         <Spacer mb={0.5} />
         <FullWidthSubtitle2>{userData.title}</FullWidthSubtitle2>
         <Spacer mb={2} />
-        <Image
-          fixed={data.avatar.childImageSharp.fixed}
-          alt='me'
-          style={IMAGE_COMPONENT_STYLE}
-          imgStyle={IMAGE_STYLE}
-        />
+        <ImageWrapper>
+          <StaticImage
+            alt={userData.name}
+            imgStyle={IMAGE_STYLE}
+            src="../../content/assets/profile-pic.png"
+            width={400}
+            height={400}
+          />
+        </ImageWrapper>
         <Spacer mb={2} />
         <CvAboutMe data={userData.aboutMe} />
         <Spacer mb={2} />
@@ -247,9 +251,9 @@ const CurriculumVitae = () => {
         <SvgStyled alt='download-cv-pdf' src={PdfIcon} />
       </Fab>
       <Link to={`/`}>
-      <BackFab>
-        <SvgStyled alt='back' src={backArrowIcon} />
-      </BackFab>
+        <BackFab>
+          <SvgStyled alt='back' src={backArrowIcon} />
+        </BackFab>
       </Link>
     </Wrapper>
   )
@@ -297,18 +301,6 @@ const C2 = styled.div`
   padding: 1rem;
 `;
 
-const BackIcon = styled.img`
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  left: 10px;
-  top: 15px;
-  opacity: 70%;
-  cursor: pointer;
-  &:hover {
-    opacity: 100%;
-  } 
-`;
 
 const Fab = styled.a`
   cursor: pointer;
@@ -368,4 +360,11 @@ const SvgStyled = styled.img`
 const FullWidthSubtitle2 = styled(Subtitle2)`
   width: 100%;
   text-align: center;
+`;
+
+const ImageWrapper = styled.div`
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 100%;
+  overflow: hidden;
 `;

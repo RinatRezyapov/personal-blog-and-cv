@@ -52,8 +52,9 @@ module.exports = {
         ]
       }
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -62,7 +63,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

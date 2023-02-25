@@ -9,12 +9,12 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components";
-
+import { StaticImage } from "gatsby-plugin-image"
 import { rhythm } from "../utils/typography"
 
 const IMAGE_STYLE = {
   marginBottom: 0,
-  borderRadius: `50%`,
+  borderRadius: `100%`,
   border: '2px solid white',
 };
 
@@ -47,16 +47,20 @@ const Bio = () => {
   const { author } = data.site.siteMetadata
   return (
     <Wrapper>
-      <BioImage
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author.name}
-        imgStyle={IMAGE_STYLE}
-      />
+      <ImageWrapper>
+        <StaticImage
+          alt={author.name}
+          imgStyle={IMAGE_STYLE}
+          src="../../content/assets/profile-pic.png"
+          width={400}
+          height={400}
+        />
+      </ImageWrapper>
       <HeadlineWrapper>
         <HeadlineSection>
           Personal blog by{' '}
           <Link to={`/cv`}>
-            {author.name}
+            {author.name} (CV)
           </Link>
         </HeadlineSection>
         <AboutSection>
@@ -94,10 +98,11 @@ const HeadlineWrapper = styled.div`
   flex-direction: column;
 `;
 
-const BioImage = styled(Image)`
+const ImageWrapper = styled.div`
   margin-right: ${rhythm(1 / 2)};
   margin-bottom: 0;
   min-width: 100px;
   min-height: 100px;
   border-radius: 100%;
+  overflow: hidden;
 `;
